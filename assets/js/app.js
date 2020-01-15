@@ -1,7 +1,7 @@
 // Carousel
 $(document).ready(function () {
-  $('.carousel').carousel();
-});
+  $('select').formSelect();
+}
 
 // HOROSCOPE API WORKS BIYATCHES!
 var settings = {
@@ -16,20 +16,17 @@ var settings = {
     },
   "data":{}
 }
-
+                  
 $.ajax(settings).done(function(response){
   console.log(response);
 })
 
-
-
-
-
-
+// Show table on Click
 $(showLovers).on("click", function() {
   $("#weHere").removeClass("hide");
 })
 
+// Mapquest
   //This lets us put in a specific location (by zip in this case)
   let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
   //original format:
