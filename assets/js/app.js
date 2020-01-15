@@ -1,7 +1,8 @@
 // Carousel
 $(document).ready(function () {
   $('select').formSelect();
-}
+  $('.carousel').carousel();
+})
 
 // HOROSCOPE API WORKS BIYATCHES!
 var settings = {
