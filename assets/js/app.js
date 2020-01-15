@@ -2,7 +2,6 @@
 $(document).ready(function(){
   $('.carousel').carousel();
 
-
 //ajax call for horoscope
 let scopeURL= "https://aztro.sameerkumar.website";
 let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
@@ -62,3 +61,8 @@ var horoLookup = function(sign){
 }
 horoLookup();
 });
+
+
+$(showLovers).on("click", function() {
+  $("#weHere").removeClass("hide");
+})
