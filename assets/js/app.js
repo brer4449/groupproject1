@@ -1,6 +1,34 @@
 // Carousel
 $(document).ready(function () {
   $('.carousel').carousel();
+});
+
+// HOROSCOPE API WORKS BIYATCHES!
+var settings = {
+  "async":true,
+  "crossDomain":true,
+  "url":"https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aries&day=today",
+  "method":"POST",
+  "headers": {
+    "x-rapidapi-host":"sameer-kumar-aztro-v1.p.rapidapi.com",
+    "x-rapidapi-key": "aa3dd9aaf7msh72e32624a82ff64p19458djsnf620a5c313c0",
+    "content-type":"application/x-www-form-urlencoded"
+    },
+  "data":{}
+}
+
+$.ajax(settings).done(function(response){
+  console.log(response);
+})
+
+
+
+
+
+
+$(showLovers).on("click", function() {
+  $("#weHere").removeClass("hide");
+})
 
   //This lets us put in a specific location (by zip in this case)
   let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
@@ -15,8 +43,3 @@ $(document).ready(function () {
     //check out the console.log! It works ;)
     console.log(response)
   })
-});
-
-$(showLovers).on("click", function() {
-  $("#weHere").removeClass("hide");
-})
