@@ -31,40 +31,56 @@
     <h2 class="center align">Your daily horoscope and matchmaking site!</h2>
   <br>
   </div>
-
-  <!-- carousel -->
-  <div class="container">
-    <div class="carousel" style="margin-bottom: 80px">
-      <a class="carousel-item" href="#one!"><img src="assets/images/carousel/arcar.jpg"></a>
-      <a class="carousel-item" href="#two!"><img src="assets/images/carousel/taurcar.jpg"></a>
-      <a class="carousel-item" href="#three!"><img src="assets/images/carousel/gemcar.jpg"></a>
-      <a class="carousel-item" href="#four!"><img src="assets/images/carousel/cancar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/leocar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/vircar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/libcar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/scorcar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/sagcar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/capcar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/aqucar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/piscescar.jpg"></a>
-    </div>
-  </div>
   
-  <!-- Input Form -->
+  <!-- Daily Horoscope -->
   <div class="row center align" style="margin-bottom: 80px">
-    <!-- Card 1 -->
+    
     <div class="col s12 m12 z-depth-2">
       <div class="card">
-          <h4 style="color:black">One form to rule them all</h4>
-        <div class="card-content">
-          <p>Don't know your star sign? Want to find out who is your best friend or worst enemy?  Fill out the form below to be one step closer to finding not only a partner, but yourself.</p>
+          <h4 
+          style="color:black">Daily Horoscope</h4>
+          <!-- id tag daily for showing and hiding -->
+        <div class="card-content" id="daily">
+          <p>horoscope here</p>
         </div>
         <div class="card-action">
-          <a href="page2.html">What's My Star Sign?</a>
+          <!-- id tag showLovers for hiding this card and showing next card  -->
+          <a href="#" id="showLovers">Who is in my area?</a>
         </div>
       </div>
     </div>
 
+      <!-- Card 2 hidden on document.ready -->
+      <!-- id tag weHere for showing remove class="hide" to show-->
+      <div class="col s12 m12 z-depth-2 hide" id="weHere">
+        <div class="card">
+            <h4 
+            style="color:black"></h4>
+          <div class="card-content">
+            <!-- table of matches -->
+            <table>
+              <thead>
+                <tr>
+                    <!-- Categories -->
+                    <th>Name</th>
+                    <th>Star Sign</th>
+                    <th>Distance</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td>Gary</td>
+                  <td>Sagittarius</td>
+                  <td>5 Miles</td>
+                </tr>
+                <!-- Dynamically add more tr cells? -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
 
   <!-- Footer -->
