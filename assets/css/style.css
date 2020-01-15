@@ -1,11 +1,25 @@
 body {
   height: 100vh;
-  width: 100vw;
+  width: 99vw;
   background-image: linear-gradient(90deg, #cdc6ff 33.33%, #c2bcff 33.33%, #c2bcff 66.66%, #c3b5ff 66.66%);
   background-size: 100% 100%;
-  background-repeat: no-repeat;
   margin: 0px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
-.jumbotron{
-  margin-top: 10rem;
+main {
+  flex: 1 0 auto;
+}
+.headers{
+  background-color: #cb0c76;
+  color: white;
+}
+.carousel .carousel-item {
+  width:500px !important;
+  margin-bottom: 50px;
+}
+
+.card-content{
+  text-indent: 50px;
 }
