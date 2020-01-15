@@ -17,6 +17,6 @@ $(document).ready(function () {
   })
 });
 
-$(srchBtn).on("click", function() {
-  $("#").removeClass("hide");
+$(showLovers).on("click", function() {
+  $("#weHere").removeClass("hide");
 })
