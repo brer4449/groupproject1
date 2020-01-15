@@ -1,7 +1,9 @@
 // Carousel
 $(document).ready(function () {
-  $('.carousel').carousel();
 
+  $('.carousel').carousel();
+  
+  $('select').formSelect();
   //This lets us put in a specific location (by zip in this case)
   let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
   //original format:
