@@ -15,6 +15,12 @@ $(document).ready(function () {
      setTimeout(autoplay, 3000);
  }
 
+//  Show Horoscope on click
+$(showHor).on("click", function () {
+  $("#inputDataHere").addClass("hide");
+  $("#daily").removeClass("hide");
+})
+
 // Show Cards on Click
 $(showLovers).on("click", function () {
   $("#daily").addClass("hide");
