@@ -1,10 +1,19 @@
-// Carousel
+// Initialization on document ready
 $(document).ready(function () {
-  $('select').formSelect();
-  $('.carousel').carousel();
+   $('select').formSelect();
+   $('.carousel').carousel();
+ 
+ 
+
+   autoplay();
 
 
-
+ 
+ // Carousel auto slide
+ function autoplay() {
+     $('.carousel').carousel('next');
+     setTimeout(autoplay, 3000);
+ }
 // HOROSCOPE API WORKS BIYATCHES!
 // var settings = {
 //   "async": true,
@@ -24,12 +33,13 @@ $(document).ready(function () {
 // })  
 
 //on click event for grabbing user info
-var e = $("#birthday-input");
-var sign = e.options[e.selectedIndex].value;
+
+
+var sign = 'cancer';
 
    // $("#birthday-input".option).on("click", function(){
-      // let sign = $('#birthday-input option:selected').val();
-      let scopeURL = "https://aztro.sameerkumar.website?sign="+sign+"&day=today";
+   // let sign = $('#birthday-input option:selected').val();
+   let scopeURL = "https://aztro.sameerkumar.website?sign="+sign+"&day=today";
    let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
    function getScope(star){
       $.ajax({
@@ -38,7 +48,7 @@ var sign = e.options[e.selectedIndex].value;
          data: {
             q: star,
             appid: scopeApiKey
-      }
+         }
       }).then(function(response) {
          console.log(response);
       });
@@ -48,7 +58,11 @@ var sign = e.options[e.selectedIndex].value;
    // });
    
 
-   
+   $("#birthday-input").change(function(){
+      var selectedSign = $(this).children("option:selected").val();
+      console.log(selectedSign);
+   });
+
 
 // Show table on Click
 // $(showLovers).on("click", function () {
