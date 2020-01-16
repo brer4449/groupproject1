@@ -1,6 +1,7 @@
 // Carousel
 $(document).ready(function () {
   $('select').formSelect();
+  $('.collapsible').collapsible();
   $('.carousel').carousel();
 });
 
