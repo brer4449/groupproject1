@@ -30,8 +30,9 @@ var settings = {
 //   console.log(response);
 // })
 
-// Show table on Click
+// Show Cards on Click
 $(showLovers).on("click", function () {
+  // $("#daily").addClass("hide");
   $("#weHere").removeClass("hide");
 })
 
@@ -48,10 +49,10 @@ let userzip = 80021;
 mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${targetzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
 
 
-$.ajax({
-  url: mapQueryUrl,
-  method: "GET",
-}).then(function (response) {
-  //check out the console.log! It works ;)
-  console.log(response.route.distance)
-})
+// $.ajax({
+//   url: mapQueryUrl,
+//   method: "GET",
+// }).then(function (response) {
+//   //check out the console.log! It works ;)
+//   console.log(response.route.distance)
+// })
