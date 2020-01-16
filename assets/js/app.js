@@ -1,6 +1,7 @@
 // Initialization on document ready
 $(document).ready(function () {
   $('select').formSelect();
+  $('.collapsible').collapsible();
   $('.carousel').carousel();
   autoplay();
 });
