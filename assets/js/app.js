@@ -1,34 +1,74 @@
 // Initialization on document ready
 $(document).ready(function () {
+
   $('select').formSelect();
   $('.collapsible').collapsible();
   $('.carousel').carousel();
   autoplay();
+
 });
 
-// Carousel auto slide
-function autoplay() {
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 3000);
-}
-
+ 
+ // Carousel auto slide
+ function autoplay() {
+     $('.carousel').carousel('next');
+     setTimeout(autoplay, 3000);
+ }
 // HOROSCOPE API WORKS BIYATCHES!
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aries&day=today",
-  "method": "POST",
-  "headers": {
-    "x-rapidapi-host": "sameer-kumar-aztro-v1.p.rapidapi.com",
-    "x-rapidapi-key": "aa3dd9aaf7msh72e32624a82ff64p19458djsnf620a5c313c0",
-    "content-type": "application/x-www-form-urlencoded"
-  },
-  "data": {}
-}
+// var settings = {
+//   "async": true,
+//   "crossDomain": true,
+//   "url": "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign='+sign+'&day=today",
+//   "method": "POST",
+//   "headers": {
+//     "x-rapidapi-host": "sameer-kumar-aztro-v1.p.rapidapi.com",
+//     "x-rapidapi-key": "aa3dd9aaf7msh72e32624a82ff64p19458djsnf620a5c313c0",
+//     "content-type": "application/x-www-form-urlencoded"
+//   },
+//   "data": {}
+// }
 
 // $.ajax(settings).done(function (response) {
 //   console.log(response);
-// })
+// })  
+
+//on click event for grabbing user info
+
+
+var sign = 'cancer';
+
+   // $("#birthday-input".option).on("click", function(){
+   // let sign = $('#birthday-input option:selected').val();
+   let scopeURL = "https://aztro.sameerkumar.website?sign="+sign+"&day=today";
+   let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
+   function getScope(star){
+      $.ajax({
+         type:'POST',
+         url: scopeURL,
+         data: {
+            q: star,
+            appid: scopeApiKey
+         }
+      }).then(function(response) {
+         console.log(response);
+      });
+   };
+   
+   getScope();
+   // });
+   
+
+   $("#birthday-input").change(function(){
+      var selectedSign = $(this).children("option:selected").val();
+			console.log(selectedSign);
+			let signToSave = selectedSign;
+			let savedSign = JSON.parse(localStorage.getItem("savedSign")) || [];
+			savedSign.push(signToSave);
+			localStorage.setItem("savedSign", JSON.stringify(savedSign));
+   });
+
+	
+
 
 // Show Cards on Click
 $(showLovers).on("click", function () {
@@ -49,10 +89,11 @@ let userzip = 80021;
 mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${targetzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
 
 
+
 // $.ajax({
 //   url: mapQueryUrl,
 //   method: "GET",
 // }).then(function (response) {
 //   //check out the console.log! It works ;)
 //   console.log(response.route.distance)
-// })
+
