@@ -1,10 +1,16 @@
-// Carousel
+// Initialization on document ready
 $(document).ready(function () {
   $('select').formSelect();
   $('.collapsible').collapsible();
   $('.carousel').carousel();
+  autoplay();
 });
 
+// Carousel auto slide
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 3000);
+}
 
 // HOROSCOPE API WORKS BIYATCHES!
 var settings = {
@@ -20,9 +26,9 @@ var settings = {
   "data": {}
 }
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-})
+// $.ajax(settings).done(function (response) {
+//   console.log(response);
+// })
 
 // Show table on Click
 $(showLovers).on("click", function () {
