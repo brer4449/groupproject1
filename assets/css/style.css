@@ -17,9 +17,6 @@ main {
 }
 .carousel .carousel-item {
   width:500px !important;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 
-.card-content{
-  text-indent: 50px;
-}
