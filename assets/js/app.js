@@ -32,8 +32,14 @@ var settings = {
 
 // Show Cards on Click
 $(showLovers).on("click", function () {
-  // $("#daily").addClass("hide");
+  $("#daily").addClass("hide");
   $("#weHere").removeClass("hide");
+})
+
+// Hide Cards on Click
+$(hideLovers).on("click", function () {
+  $("#daily").removeClass("hide");
+  $("#weHere").addClass("hide");
 })
 
 //MAPQUEST
