@@ -15,6 +15,17 @@ $(document).ready(function () {
      setTimeout(autoplay, 3000);
  }
 
+// Show Cards on Click
+$(showLovers).on("click", function () {
+  $("#daily").addClass("hide");
+  $("#weHere").removeClass("hide");
+})
+
+// Hide Cards on Click
+$(hideLovers).on("click", function () {
+  $("#daily").removeClass("hide");
+  $("#weHere").addClass("hide");
+})
 
 //MAPQUEST
 let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
