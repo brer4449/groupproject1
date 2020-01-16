@@ -7,11 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- CSS Style Sheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <title>Whore-o-scope</title>
+  
 </head>
 
 <body>
@@ -20,33 +23,39 @@
     <div class="nav-wrapper">
       <a href="index.html" class="brand-logo">Whore-o-scope</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
         <li><a href="page3.html">Compatibility Chart</a></li>
       </ul>
     </div>
   </nav>
+
   <!-- Headers -->
   <div class="headers">
     <h1 class="center align">Do you want to meet your star crossed lover?</h1>
     <h2 class="center align">Your daily horoscope and matchmaking site!</h2>
     <br>
   </div>
+  <h3 class="center align">"Like Grindr, but for horoscopes!" -Brendan Erickson</h3>
+
   <!-- carousel -->
   <div class="container">
     <div class="carousel" style="margin-bottom: 80px">
+      <a class="carousel-item" href="#twelve!"><img src="assets/images/carousel/piscescar.jpg"></a>
       <a class="carousel-item" href="#one!"><img src="assets/images/carousel/arcar.jpg"></a>
       <a class="carousel-item" href="#two!"><img src="assets/images/carousel/taurcar.jpg"></a>
       <a class="carousel-item" href="#three!"><img src="assets/images/carousel/gemcar.jpg"></a>
       <a class="carousel-item" href="#four!"><img src="assets/images/carousel/cancar.jpg"></a>
       <a class="carousel-item" href="#five!"><img src="assets/images/carousel/leocar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/vircar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/libcar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/scorcar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/sagcar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/capcar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/aqucar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/piscescar.jpg"></a>
+      <a class="carousel-item" href="#six!"><img src="assets/images/carousel/vircar.jpg"></a>
+      <a class="carousel-item" href="#seven!"><img src="assets/images/carousel/libcar.jpg"></a>
+      <a class="carousel-item" href="#eight!"><img src="assets/images/carousel/scorcar.jpg"></a>
+      <a class="carousel-item" href="#nine!"><img src="assets/images/carousel/sagcar.jpg"></a>
+      <a class="carousel-item" href="#ten!"><img src="assets/images/carousel/capcar.jpg"></a>
+      <a class="carousel-item" href="#eleven!"><img src="assets/images/carousel/aqucar.jpg"></a>
     </div>
   </div>
+
+
   <!-- Input Form -->
   <div class="row center align" style="margin-bottom: 80px">
     <!-- Card 1 -->
@@ -56,24 +65,26 @@
         <div class="card-content">
           <p>Don't know your star sign? Want to find out who is your best friend or worst enemy? Fill out the form below
             to be one step closer to finding not only a partner, but yourself.</p>
+
           <!-- Choose Birth Range -->
           <div class="input-field col s12">
-            <select>
+            <select id="birthday-input">
               <option value="" disabled selected>Choose your date of birth</option>
-              <option value="1">March 21 – April 19</option>
-              <option value="2">April 20 – May 20</option>
-              <option value="3">May 21 – June 20</option>
-              <option value="4"> June 21 – July 22</option>
-              <option value="5">July 32 – August 22</option>
-              <option value="6">August 23 – September 22</option>
-              <option value="7">September 23 – October 22</option>
-              <option value="8">October 23 – November 21</option>
-              <option value="9">November 22 – December 21</option>
-              <option value="10">December 22 – January 19</option>
-              <option value="11"> January 20 – February 18 </option>
-              <option value="12">February 19 – March 20 </option>
+              <option value="aries">March 21 – April 20</option>
+              <option value="taurus">April 21 – May 20</option>
+              <option value="gemini">May 21 – June 21</option>
+              <option value="cancer"> June 22 – July 22</option>
+              <option value="leo">July 23 – August 22</option>
+              <option value="virgo">August 23 – September 22</option>
+              <option value="libra">September 23 – October 22</option>
+              <option value="scorpio">October 23 – November 22</option>
+              <option value="sagittarius">November 23 – December 21</option>
+              <option value="capricorn">December 22 – January 19</option>
+              <option value="aquarius"> January 20 – February 18 </option>
+              <option value="pisces">February 19 – March 20 </option>
             </select>
           </div>
+
           <!-- Choose Relevant ZIP Code -->
           <div class="input-field col s12">
             <select id="zipcodes">
@@ -87,7 +98,7 @@
           </div>
         </div>
         <div class="card-action">
-          <a href="page2.html">What's My Star Sign?</a>
+          <a href="page2.html"><i class="material-icons">brightness_4</i>What's My Star Sign?</a>
         </div>
       </div>
     </div>
@@ -98,15 +109,14 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.
-          </p>
+          <h5 class="white-text">You are what happened when I wished upon a star.</h5>
+          <p class="grey-text text-lighten-4">A passion project by young romantics</p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="page3.html">Compatibility Chart</a></li>
           </ul>
         </div>
       </div>
@@ -127,8 +137,9 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-        © 2020 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        Whore-o-scope ©2020
+        <a class="grey-text text-lighten-4 right" href="https://github.com/brer4449/groupproject1">Visit us on
+          GitHub!</a>
       </div>
     </div>
   </footer>

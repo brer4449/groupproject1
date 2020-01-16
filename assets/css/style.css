@@ -17,9 +17,16 @@ main {
 }
 .carousel .carousel-item {
   width:500px !important;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 
-.card-content{
-  text-indent: 50px;
+.user-image{
+  width:100px;
+  height:300px;
 }
+
+.sign{
+  width:20px;
+  height:20px;
+}
+

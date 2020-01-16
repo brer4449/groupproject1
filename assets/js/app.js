@@ -1,37 +1,28 @@
-// Carousel
+// Initialization on document ready
 $(document).ready(function () {
+
   $('select').formSelect();
+  $('.collapsible').collapsible();
   $('.carousel').carousel();
+  autoplay();
+
 });
 
+ 
+ // Carousel auto slide
+ function autoplay() {
+     $('.carousel').carousel('next');
+     setTimeout(autoplay, 3000);
+ }
 
-// HOROSCOPE API WORKS BIYATCHES!
-// var settings = {
-//   async: true,
-//   crossDomain: true,
-//   url: "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=aries&day=today",
-//   method: "POST",
-//   headers: {
-//     "x-rapidapi-host": "sameer-kumar-aztro-v1.p.rapidapi.com",
-//     "x-rapidapi-key": "aa3dd9aaf7msh72e32624a82ff64p19458djsnf620a5c313c0",
-//     "content-type": "application/x-www-form-urlencoded"
-//   },
-//   data: {}
-// }
-
-// $.ajax(settings).done(function (response) {
-//   console.log(response);
-// })
-
-// Show table on Click
-// $(showLovers).on("click", function () {
-//   $("#weHere").removeClass("hide");
-// })
 
 //MAPQUEST
 let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
 //original format:
 //https://www.mapquestapi.com/directions/v2/route?key=KEY&from=Denver%2C+CO&to=Boulder%2C+CO&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false
+//original directions url:
+//https://www.mapquestapi.com/directions/v2/route?key=KEY&from=Denver%2C+CO&to=Boulder%2C+CO&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false
+//This lets us put in directions (by zip code)
 let mapQueryUrl = `http://www.mapquestapi.com/geocoding/v1/address?key=${mapAPIKey}&location=2080202&thumbMaps=false`
 //This variable will be the fake user's zip (determined by compatability?):
 let fakeuserzip = "80303";
@@ -44,12 +35,6 @@ let distanceSettings =
   url: mapQueryUrl,
   method: "GET",
 };
-
-//original directions url:
-//https://www.mapquestapi.com/directions/v2/route?key=KEY&from=Denver%2C+CO&to=Boulder%2C+CO&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false
-//This lets us put in directions (by zip code)
-
-
 
 function mapAjaxCall() {
   $.ajax({
@@ -73,9 +58,38 @@ $("select#zipcodes").change(function () {
   userzip = parseInt(userzip);
   mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${fakeuserzip}&to=${userzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
   mapAjaxCall();
-
 });
 
 
+	//variables for horoscope api
+	var sign = "aries";
+	let scopeURL = "https://aztro.sameerkumar.website?sign="+sign+"&day=today";
+	let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
+	//horoscope api call function
+	function getScope(star){
+		$.ajax({
+					type:'POST',
+					url: scopeURL,
+					data: {
+						q: star,
+						appid: scopeApiKey
+					}
+		}).then(function(response) {
+				console.log(response);
+		});
+	};
 
-
+	//Event for user selecting birthday from dropdown!
+	$("#birthday-input").change(function(){
+		//takes user birthday input and saves it to local storage
+		var selectedSign = $(this).children("option:selected").val();
+		console.log(selectedSign);
+		let signToSave = selectedSign;
+		let savedSign = JSON.parse(localStorage.getItem("savedSign")) || [];
+		savedSign.push(signToSave);
+		localStorage.setItem("savedSign", JSON.stringify(savedSign));
+		console.log(savedSign[savedSign.length - 1]);
+		//takes last item in local storage and submits it to api
+		selectedSign = savedSign[savedSign.length - 1];
+		getScope(sign);
+	});
