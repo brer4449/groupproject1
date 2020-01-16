@@ -20,3 +20,13 @@ main {
   margin-bottom: 5rem;
 }
 
+.user-image{
+  width:100px;
+  height:300px;
+}
+
+.sign{
+  width:20px;
+  height:20px;
+}
+
