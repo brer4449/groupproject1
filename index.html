@@ -25,14 +25,12 @@
       </ul>
     </div>
   </nav>
-
   <!-- Headers -->
   <div class="headers">
     <h1 class="center align">Do you want to meet your star crossed lover?</h1>
     <h2 class="center align">Your daily horoscope and matchmaking site!</h2>
-  <br>
+    <br>
   </div>
-
   <!-- carousel -->
   <div class="container">
     <div class="carousel" style="margin-bottom: 80px">
@@ -50,70 +48,97 @@
       <a class="carousel-item" href="#five!"><img src="assets/images/carousel/piscescar.jpg"></a>
     </div>
   </div>
-  
   <!-- Input Form -->
   <div class="row center align" style="margin-bottom: 80px">
     <!-- Card 1 -->
     <div class="col s12 m12 z-depth-2">
       <div class="card">
-          <h4 style="color:black">One form to rule them all</h4>
+        <h4 style="color:black">One form to rule them all</h4>
         <div class="card-content">
-          <p>Don't know your star sign? Want to find out who is your best friend or worst enemy?  Fill out the form below to be one step closer to finding not only a partner, but yourself.</p>
+          <p>Don't know your star sign? Want to find out who is your best friend or worst enemy? Fill out the form below
+            to be one step closer to finding not only a partner, but yourself.</p>
+          <!-- Choose Birth Range -->
+          <div class="input-field col s12">
+            <select id="birthday-input">
+              <option value="" disabled selected>Choose your date of birth</option>
+              <option value="aries" id="aries">March 21 – April 20</option>
+              <option value="2" id="taurus">April 21 – May 20</option>
+              <option value="3" id="gemini">May 21 – June 21</option>
+              <option value="4" id="cancer"> June 22 – July 22</option>
+              <option value="5" id="leo">July 23 – August 22</option>
+              <option value="6" id="virgo">August 23 – September 22</option>
+              <option value="7" id="libra">September 23 – October 22</option>
+              <option value="8" id="scorpio">October 23 – November 22</option>
+              <option value="9" id="sagittarius">November 23 – December 21</option>
+              <option value="10" id="capricorn">December 22 – January 19</option>
+              <option value="11" id="aquarius"> January 20 – February 18 </option>
+              <option value="12" id="pisces">February 19 – March 20 </option>
+            </select>
+          </div>
+          <!-- Choose Relevant ZIP Code -->
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected>Choose your closest Zipcode</option>
+              <option value="1">20007</option>
+              <option value="2">20500</option>
+              <option value="3"> 20036</option>
+              <option value="4">20024</option>
+              <option value="5">20560</option>
+            </select>
+          </div>
         </div>
         <div class="card-action">
-          <a href="page2.html">What's My Star Sign?</a>
+          <a href="page2.html" id="data-input">What's My Star Sign?</a>
         </div>
       </div>
     </div>
-
-
-
-  <!-- Footer -->
-  <footer class="page-footer pink darken-3">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row center align">
-        <img src="assets/images/signs/aries.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/taurus.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/gemini.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/cancer.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/leo.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/virgo.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/libra.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/scorpio.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/sagittarius.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/capricorn.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/aquarius.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/pisces.png" class="bot" height="50px" width="50px">
-      </div>
-
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      © 2020 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- jQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Materialize Java -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- Our JS -->
-  <script src="assets/js/app.js"></script>
+  </div>
+  
+        <!-- Footer -->
+        <footer class="page-footer pink darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.
+                </p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row center align">
+              <img src="assets/images/signs/aries.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/taurus.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/gemini.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/cancer.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/leo.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/virgo.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/libra.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/scorpio.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/sagittarius.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/capricorn.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/aquarius.png" class="bot" height="50px" width="50px">
+              <img src="assets/images/signs/pisces.png" class="bot" height="50px" width="50px">
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              © 2020 Copyright Text
+              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Materialize Java -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Our JS -->
+        <script src="assets/js/app.js"></script>
 </body>
 
 </html>

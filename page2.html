@@ -33,26 +33,26 @@
   </div>
   
   <!-- Daily Horoscope -->
-  <!-- id tag daily for showing and hiding -->
-  <div class="row center align" id="daily" style="margin-bottom: 80px">
+  <div class="row center align" style="margin-bottom: 80px">
     
     <div class="col s12 m12 z-depth-2">
       <div class="card">
           <h4 
           style="color:black">Daily Horoscope</h4>
-        <div class="card-content">
+          <!-- id tag daily for showing and hiding -->
+        <div class="card-content" id="daily">
           <p>horoscope here</p>
         </div>
-        <!-- id tag showLovers for hiding this card and showing next card  -->
-        <div class="card-action" id="showLovers">
-          <a href="#">What's My Star Sign?</a>
+        <div class="card-action">
+          <!-- id tag showLovers for hiding this card and showing next card  -->
+          <a href="#" id="showLovers">Who is in my area?</a>
         </div>
       </div>
     </div>
 
       <!-- Card 2 hidden on document.ready -->
-      <!-- id tag daily for showing -->
-      <div class="col s12 m12 z-depth-2" id="weHere">
+      <!-- id tag weHere for showing remove class="hide" to show-->
+      <div class="col s12 m12 z-depth-2 hide" id="weHere">
         <div class="card">
             <h4 
             style="color:black"></h4>
@@ -81,6 +81,7 @@
           </div>
         </div>
       </div>
+    </div>
 
 
   <!-- Footer -->
@@ -113,8 +114,7 @@
         <img src="assets/images/signs/aquarius.png" class="bot" height="50px" width="50px">
         <img src="assets/images/signs/pisces.png" class="bot" height="50px" width="50px">
       </div>
-
-    </div>
+    </div> 
     <div class="footer-copyright">
       <div class="container">
       © 2020 Copyright Text
