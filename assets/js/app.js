@@ -276,6 +276,7 @@ var APIcalls = $("#showHor").on("click",function(e) {
 	console.log(userzip);
 	selectedSign = $("#birthday-input :selected").val();
 	console.log(selectedSign);
+	scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
 	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[0].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
 	getScope();
 	mapAjaxCall();
