@@ -166,18 +166,6 @@ function mapSetLocalStorage(userzip) {
 // });
 
 
-
-// var e = $("select#zipcodes");
-// var strUser = e.options[e.selectedIndex].value;
-// console.log(strUser);
-
-// $("#zipcodes :selected").text(); // The text content of the selected option
-// var poo = $("#zipcodes :selected").val(); // The value of the selected option
-// console.log(poo);
-
-
-
-
 var allFakeUsers = [
 	fakeUser1 = {
 		distancetext: $("#user1-distance"),
@@ -287,8 +275,10 @@ var APIcalls = $("#showHor").on("click",function(e) {
 	console.log(userzip);
 	selectedSign = $("#birthday-input :selected").val();
 	console.log(selectedSign);
+	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[0].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
 	// var horoscope = 
 	getScope();
+	mapAjaxCall();
 	// userzip = ($("#zipcodes").prop('selectedIndex'));
 	// fakeuserzip = allFakeUsers.forEach(function(idx){
 	// 	idx
