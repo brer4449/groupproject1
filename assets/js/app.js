@@ -106,7 +106,7 @@ $("select#zipcodes").change(function () {
 		
 		getScope();
 	});
-};
+
 
 //Event for user selecting birthday from dropdown!
 $("#birthday-input").change(function () {
