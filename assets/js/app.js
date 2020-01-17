@@ -62,50 +62,50 @@ function mapSetLocalStorage(userzip) {
 $("select#zipcodes").change(function () {
 	userzip = $(this).children("option:selected").val();
 	mapSetLocalStorage(userzip)
-	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${fakeuserzip}&to=${userzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
+	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${fakeuserzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
 	mapAjaxCall();
 });
 
 
-	//variables for horoscope api
-	let scopeURL = "https://aztro.sameerkumar.website?sign=aries&day=today";
-	let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
-	//horoscope api call function
-	function getScope(){
-		
-		$.ajax({
-					type:'POST',
-					url: scopeURL,
-					data: {
-						appid: scopeApiKey
-					}
-		}).then(function(response) {
-				console.log(response);
-		});
-	};
+//variables for horoscope api
+let scopeURL = "https://aztro.sameerkumar.website?sign=aries&day=today";
+let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
+//horoscope api call function
+function getScope() {
 
-	function horoscopeSetLocalStorage(userzip) {
-		let savedZip = JSON.parse(localStorage.getItem("savedZip")) || [];
-		savedZip.push(userzip);
-		localStorage.setItem("savedZip", JSON.stringify(savedZip));
-		userzip = savedZip[savedZip.length - 1];
-		userzip = parseInt(userzip);
-	}
-	
-	$("#birthday-input").change(function(){
-		//takes user birthday input and saves it to local storage
-		selectedSign = $(this).children("option:selected").val();
-		console.log(selectedSign);
-		let savedSign = JSON.parse(localStorage.getItem("savedSign")) || [];
-		savedSign.push(selectedSign);
-		localStorage.setItem("savedSign", JSON.stringify(savedSign));
-		console.log(savedSign[savedSign.length - 1]);
-		//takes last item in local storage and submits it to api
-		selectedSign = savedSign[savedSign.length - 1];
-		scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
-		
-		getScope();
+	$.ajax({
+		type: 'POST',
+		url: scopeURL,
+		data: {
+			appid: scopeApiKey
+		}
+	}).then(function (response) {
+		console.log(response);
 	});
+};
+
+function horoscopeSetLocalStorage(userzip) {
+	let savedZip = JSON.parse(localStorage.getItem("savedZip")) || [];
+	savedZip.push(userzip);
+	localStorage.setItem("savedZip", JSON.stringify(savedZip));
+	userzip = savedZip[savedZip.length - 1];
+	userzip = parseInt(userzip);
+}
+
+$("#birthday-input").change(function () {
+	//takes user birthday input and saves it to local storage
+	selectedSign = $(this).children("option:selected").val();
+	console.log(selectedSign);
+	let savedSign = JSON.parse(localStorage.getItem("savedSign")) || [];
+	savedSign.push(selectedSign);
+	localStorage.setItem("savedSign", JSON.stringify(savedSign));
+	console.log(savedSign[savedSign.length - 1]);
+	//takes last item in local storage and submits it to api
+	selectedSign = savedSign[savedSign.length - 1];
+	scopeURL = "https://aztro.sameerkumar.website?sign=" + selectedSign + "&day=today";
+
+	getScope();
+});
 
 
 //Event for user selecting birthday from dropdown!
@@ -123,49 +123,57 @@ $("#birthday-input").change(function () {
 	getScope(sign);
 });
 
+// function findMatch() {
+// 	for (let i = 0; i < goodMatch.length; i++) {
+// 		if ($(".fakeuser").val() == goodMatch[i]) {
+// 			$(".fakeuser").removeClass("hide")
+// 		}
+// 	}
+// }
+// goodMatch.includes(compatability)
 
-// //cancer matches:
-["taurus", "virgo", "capricorn", "cancer", "scorpio", "pices"]
+// // //cancer matches:
+// ["taurus", "virgo", "capricorn", "cancer", "scorpio", "pices"]
 
-switch (signThatUserIs) {
-	case "aries":
-		goodMatch = "Pisces"
-		break;
-	case "taurus":
-		goodMatch = ""
-		break;
-	case "gemini":
-		goodMatch = ""
-		break;
-	case "cancer":
-		goodMatch = ""
-		break;
-	case "leo":
-		goodMatch = ""
-		break;
-	case "virgo":
-		goodMatch = ""
-		break;
-	case "libra":
-		goodMatch = ""
-		break;
-	case "scorpio":
-		goodMatch = ""
-		break;
-	case "sagittarius":
-		goodMatch = ""
-		break;
-	case "capricorn":
-		goodMatch = ""
-		break;
-	case "aquarius":
-		goodMatch = ""
-		break;
-	case "pisces":
-		goodMatch = ""
-		break;
-	default:
-		alert('Enter a sign')
-		break;
-}
+// switch (signThatUserIs) {
+// 	case "aries":
+// 		goodMatch = "Pisces"
+// 		break;
+// 	case "taurus":
+// 		goodMatch = ""
+// 		break;
+// 	case "gemini":
+// 		goodMatch = ""
+// 		break;
+// 	case "cancer":
+// 		goodMatch = ""
+// 		break;
+// 	case "leo":
+// 		goodMatch = ""
+// 		break;
+// 	case "virgo":
+// 		goodMatch = ""
+// 		break;
+// 	case "libra":
+// 		goodMatch = ""
+// 		break;
+// 	case "scorpio":
+// 		goodMatch = ""
+// 		break;
+// 	case "sagittarius":
+// 		goodMatch = ""
+// 		break;
+// 	case "capricorn":
+// 		goodMatch = ""
+// 		break;
+// 	case "aquarius":
+// 		goodMatch = ""
+// 		break;
+// 	case "pisces":
+// 		goodMatch = ""
+// 		break;
+// 	default:
+// 		alert('Enter a sign')
+// 		break;
+// }
 
