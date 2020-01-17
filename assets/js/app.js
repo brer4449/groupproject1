@@ -5,6 +5,7 @@ $(document).ready(function () {
 	$('.carousel').carousel();
 	autoplay();
 });
+
 // Carousel auto slide
 function autoplay() {
 	$('.carousel').carousel('next');
@@ -15,6 +16,7 @@ $("#showHor").on("click", function () {
 	$("#inputDataHere").addClass("hide");
 	$("#daily").removeClass("hide");
 })
+
 // Show Cards on Click
 $("#showLovers").on("click", function () {
 	$("#daily").addClass("hide");
