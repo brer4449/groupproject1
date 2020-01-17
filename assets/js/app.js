@@ -92,6 +92,7 @@ $("select#zipcodes").change(function () {
 		userzip = parseInt(userzip);
 	}
 	
+	//Event for user selecting birthday from dropdown!
 	$("#birthday-input").change(function(){
 		//takes user birthday input and saves it to local storage
 		selectedSign = $(this).children("option:selected").val();
@@ -106,66 +107,53 @@ $("select#zipcodes").change(function () {
 		
 		getScope();
 	});
-};
 
-//Event for user selecting birthday from dropdown!
-$("#birthday-input").change(function () {
-	//takes user birthday input and saves it to local storage
-	var selectedSign = $(this).children("option:selected").val();
-	console.log(selectedSign);
-	let signToSave = selectedSign;
-	let savedSign = JSON.parse(localStorage.getItem("savedSign")) || [];
-	savedSign.push(signToSave);
-	localStorage.setItem("savedSign", JSON.stringify(savedSign));
-	console.log(savedSign[savedSign.length - 1]);
-	//takes last item in local storage and submits it to api
-	selectedSign = savedSign[savedSign.length - 1];
-	getScope(sign);
-});
+
+
 
 
 // //cancer matches:
 ["taurus", "virgo", "capricorn", "cancer", "scorpio", "pices"]
 
-switch (signThatUserIs) {
-	case "aries":
-		goodMatch = "Pisces"
-		break;
-	case "taurus":
-		goodMatch = ""
-		break;
-	case "gemini":
-		goodMatch = ""
-		break;
-	case "cancer":
-		goodMatch = ""
-		break;
-	case "leo":
-		goodMatch = ""
-		break;
-	case "virgo":
-		goodMatch = ""
-		break;
-	case "libra":
-		goodMatch = ""
-		break;
-	case "scorpio":
-		goodMatch = ""
-		break;
-	case "sagittarius":
-		goodMatch = ""
-		break;
-	case "capricorn":
-		goodMatch = ""
-		break;
-	case "aquarius":
-		goodMatch = ""
-		break;
-	case "pisces":
-		goodMatch = ""
-		break;
-	default:
-		alert('Enter a sign')
-		break;
-}
+// switch (signThatUserIs) {
+// 	case "aries":
+// 		goodMatch = "Pisces"
+// 		break;
+// 	case "taurus":
+// 		goodMatch = ""
+// 		break;
+// 	case "gemini":
+// 		goodMatch = ""
+// 		break;
+// 	case "cancer":
+// 		goodMatch = ""
+// 		break;
+// 	case "leo":
+// 		goodMatch = ""
+// 		break;
+// 	case "virgo":
+// 		goodMatch = ""
+// 		break;
+// 	case "libra":
+// 		goodMatch = ""
+// 		break;
+// 	case "scorpio":
+// 		goodMatch = ""
+// 		break;
+// 	case "sagittarius":
+// 		goodMatch = ""
+// 		break;
+// 	case "capricorn":
+// 		goodMatch = ""
+// 		break;
+// 	case "aquarius":
+// 		goodMatch = ""
+// 		break;
+// 	case "pisces":
+// 		goodMatch = ""
+// 		break;
+// 	default:
+// 		alert('Enter a sign')
+// 		break;
+// }
 
