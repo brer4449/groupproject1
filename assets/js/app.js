@@ -113,7 +113,6 @@ $("select#zipcodes").change(function () {
 
 
 
-
 // //cancer matches:
 // ["taurus", "virgo", "capricorn", "cancer", "scorpio", "pices"]
 
