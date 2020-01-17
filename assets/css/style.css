@@ -25,3 +25,6 @@ main {
   height:20px;
 }
 
+.circle{
+  display:inline-block;
+}

@@ -1,11 +1,9 @@
 // Initialization on document ready
 $(document).ready(function () {
-
 	$('select').formSelect();
 	$('.collapsible').collapsible();
 	$('.carousel').carousel();
 	autoplay();
-
 });
 
 // Carousel auto slide
@@ -21,17 +19,15 @@ $("#showHor").on("click", function () {
 })
 
 // Show Cards on Click
-$(showLovers).on("click", function () {
+$("#showLovers").on("click", function () {
 	$("#daily").addClass("hide");
 	$("#weHere").removeClass("hide");
 })
-
 // Hide Cards on Click
-$(hideLovers).on("click", function () {
+$("#hideLovers").on("click", function () {
 	$("#daily").removeClass("hide");
 	$("#weHere").addClass("hide");
 })
-
 //MAPQUEST
 let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
 //original format:
@@ -63,14 +59,12 @@ function mapSetLocalStorage(userzip) {
 	userzip = savedZip[savedZip.length - 1];
 	userzip = parseInt(userzip);
 }
-
 $("select#zipcodes").change(function () {
 	userzip = $(this).children("option:selected").val();
-	mapSetLocalStorage(userzip);
+	mapSetLocalStorage(userzip)
 	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${fakeuserzip}&to=${userzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
 	mapAjaxCall();
 });
-
 
 
 //variables for horoscope api
@@ -105,6 +99,7 @@ $("#birthday-input").change(function () {
 	selectedSign = savedSign[savedSign.length - 1];
 	getScope(sign);
 });
+
 
 // //cancer matches:
 ["taurus", "virgo", "capricorn", "cancer", "scorpio", "pices"]
@@ -150,3 +145,4 @@ switch (signThatUserIs) {
 		alert('Enter a sign')
 		break;
 }
+
