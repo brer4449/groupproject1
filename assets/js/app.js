@@ -84,15 +84,18 @@ $("select#zipcodes").change(function () {
 		});
 	};
 
-	function horoscopeSetLocalStorage(userzip) {
-		let savedZip = JSON.parse(localStorage.getItem("savedZip")) || [];
-		savedZip.push(userzip);
-		localStorage.setItem("savedZip", JSON.stringify(savedZip));
-		userzip = savedZip[savedZip.length - 1];
-		userzip = parseInt(userzip);
-	}
-	
 	//Event for user selecting birthday from dropdown!
+	// var selectedSign = $("#birthday-input").children("option:selected").val();
+	// console.log(selectedSign);
+
+	function showHoroscope () {
+		let btn = $("#showHor");
+		btn.on("click", function(e) {
+
+		})
+	};
+
+
 	$("#birthday-input").change(function(){
 		//takes user birthday input and saves it to local storage
 		selectedSign = $(this).children("option:selected").val();
@@ -104,7 +107,6 @@ $("select#zipcodes").change(function () {
 		//takes last item in local storage and submits it to api
 		selectedSign = savedSign[savedSign.length - 1];
 		scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
-		
 		getScope();
 	});
 
@@ -113,7 +115,7 @@ $("select#zipcodes").change(function () {
 
 
 // //cancer matches:
-["taurus", "virgo", "capricorn", "cancer", "scorpio", "pices"]
+// ["taurus", "virgo", "capricorn", "cancer", "scorpio", "pices"]
 
 // switch (signThatUserIs) {
 // 	case "aries":
@@ -157,3 +159,10 @@ $("select#zipcodes").change(function () {
 // 		break;
 // }
 
+
+var allFakeUsers = [
+	fakeUser1 = {
+		spot: $("#user1-distance"),
+		zip: 20017
+	}
+]
