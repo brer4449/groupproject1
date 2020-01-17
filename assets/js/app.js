@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 });
 
- 
+
  // Carousel auto slide
  function autoplay() {
      $('.carousel').carousel('next');
