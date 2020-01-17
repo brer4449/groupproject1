@@ -96,6 +96,7 @@ function getScope(){
 				}
 	}).then(function(response) {
 			console.log(response.description);
+			$("#daily-scope").text(`${response.description}`)
 	});
 };
 
@@ -276,7 +277,6 @@ var APIcalls = $("#showHor").on("click",function(e) {
 	selectedSign = $("#birthday-input :selected").val();
 	console.log(selectedSign);
 	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[0].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
-	// var horoscope = 
 	getScope();
 	mapAjaxCall();
 	// userzip = ($("#zipcodes").prop('selectedIndex'));
