@@ -11,6 +11,7 @@ function autoplay() {
 	$('.carousel').carousel('next');
 	setTimeout(autoplay, 3000);
 }
+
 //  Show Horoscope on click
 $("#showHor").on("click", function () {
 	$("#inputDataHere").addClass("hide");
@@ -33,12 +34,12 @@ let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
 //https://www.mapquestapi.com/directions/v2/route?key=KEY&from=Denver%2C+CO&to=Boulder%2C+CO&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false
 //original directions url:
 //https://www.mapquestapi.com/directions/v2/route?key=KEY&from=Denver%2C+CO&to=Boulder%2C+CO&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false
-//This lets us put in directions (by zip code)
 let mapQueryUrl = `http://www.mapquestapi.com/geocoding/v1/address?key=${mapAPIKey}&location=2080202&thumbMaps=false`
 //This variable will be the fake user's zip (determined by compatability?):
-let fakeuserzip = 80303;
+let fakeuserzip = 20895;
 //Initializing user zip code:
 let userzip;
+
 function mapAjaxCall() {
 	$.ajax({
 		url: mapQueryUrl,
@@ -50,6 +51,7 @@ function mapAjaxCall() {
 		$("p#test").text(distance);
 	})
 }
+
 function mapSetLocalStorage(userzip) {
 	let savedZip = JSON.parse(localStorage.getItem("savedZip")) || [];
 	savedZip.push(userzip);
@@ -63,6 +65,8 @@ $("select#zipcodes").change(function () {
 	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${fakeuserzip}&to=${userzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
 	mapAjaxCall();
 });
+
+
 //variables for horoscope api
 var sign = "aries";
 let scopeURL = "https://aztro.sameerkumar.website?sign=" + sign + "&day=today";
@@ -80,6 +84,7 @@ function getScope(star) {
 		console.log(response);
 	});
 };
+
 //Event for user selecting birthday from dropdown!
 $("#birthday-input").change(function () {
 	//takes user birthday input and saves it to local storage
@@ -94,3 +99,50 @@ $("#birthday-input").change(function () {
 	selectedSign = savedSign[savedSign.length - 1];
 	getScope(sign);
 });
+
+
+// //cancer matches:
+["taurus", "virgo", "capricorn", "cancer", "scorpio", "pices"]
+
+switch (signThatUserIs) {
+	case "aries":
+		goodMatch = "Pisces"
+		break;
+	case "taurus":
+		goodMatch = ""
+		break;
+	case "gemini":
+		goodMatch = ""
+		break;
+	case "cancer":
+		goodMatch = ""
+		break;
+	case "leo":
+		goodMatch = ""
+		break;
+	case "virgo":
+		goodMatch = ""
+		break;
+	case "libra":
+		goodMatch = ""
+		break;
+	case "scorpio":
+		goodMatch = ""
+		break;
+	case "sagittarius":
+		goodMatch = ""
+		break;
+	case "capricorn":
+		goodMatch = ""
+		break;
+	case "aquarius":
+		goodMatch = ""
+		break;
+	case "pisces":
+		goodMatch = ""
+		break;
+	default:
+		alert('Enter a sign')
+		break;
+}
+
