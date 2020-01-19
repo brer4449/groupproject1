@@ -291,13 +291,14 @@ $("#showHor").on("click",function() {
 	for (i=0; i<allFakeUsers.length; i++) {
 		mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[i].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
 		// console.log(mapQueryUrl);
-		allFakeUsers[i].distancetext.text("boo");
+		mapAjaxCall();
+		// allFakeUsers[i].distancetext.text(mapAjaxCall());
 		// urls.push(distance);
 		// console.log(urls);
+		
 	}
 	// }
-	mapAjaxCall();
-
+	
 
 	// 	distanceDisplays[i].append(mapAjaxCall()`${response.route.distance}`);
 
