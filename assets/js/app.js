@@ -5,22 +5,16 @@ $(document).ready(function () {
 	$('.carousel').carousel();
 	autoplay();
 });
-
 // Carousel auto slide
 function autoplay() {
 	$('.carousel').carousel('next');
 	setTimeout(autoplay, 3000);
 }
-
 //  Show Horoscope on click
 $("#showHor").on("click", function () {
 	$("#inputDataHere").addClass("hide");
 	$("#daily").removeClass("hide");
 })
-
-
-
-
 //variables for horoscope api
 let scopeURL = "https://aztro.sameerkumar.website?sign=aries&day=today";
 let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
@@ -34,9 +28,10 @@ function getScope() {
 		}
 	}).then(function (response) {
 		console.log(response.description);
+		$("#daily-scope").text(`${response.description}`)
+
 	});
 };
-
 function horoscopeSetLocalStorage(userzip) {
 	let savedZip = JSON.parse(localStorage.getItem("savedZip")) || [];
 	savedZip.push(userzip);
@@ -44,21 +39,15 @@ function horoscopeSetLocalStorage(userzip) {
 	userzip = savedZip[savedZip.length - 1];
 	userzip = parseInt(userzip);
 }
-
-
 //MAPQUEST
 let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
 //original directions url:
-
 let mapQueryUrl = `http://www.mapquestapi.com/geocoding/v1/address?key=${mapAPIKey}&location=2080202&thumbMaps=false`
-
 //This variable will be the fake user's zip (determined by compatability?):
-let fakeuserzip = 80303;
+let fakeuserzip;
 //Initializing user zip code:
 let userzip = 20895;
-
 mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${fakeuserzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`;
-
 function mapAjaxCall() {
 	$.ajax({
 		url: mapQueryUrl,
@@ -69,14 +58,12 @@ function mapAjaxCall() {
 		console.log(response);
 	})
 }
-
 function mapSetLocalStorage(userzip) {
 	let savedZip = JSON.parse(localStorage.getItem("savedZip")) || [];
 	savedZip.push(userzip);
 	localStorage.setItem("savedZip", JSON.stringify(savedZip));
 	userzip = savedZip[savedZip.length - 1];
 }
-
 //array of objects of all the fakeusers with their zip and jquery selector of where the distance will go
 let allFakeUsers = [
 	fakeUser1 = {
@@ -180,37 +167,15 @@ let allFakeUsers = [
 		zip: 20555
 	}
 ]
-
-
-
 function findMatch(goodMatch, allFakeUsers) {
 	for (let i = 0; i < allFakeUsers.length; i++) {
 		fakeUserSign = $(`#fakeuser${i}`).attr("value")
 		// console.log(fakeUserSign);
 		if (goodMatch.includes(fakeUserSign)) {
-			$(`#fakeuser${i}`).removeClass("hide") //this just goes through and takes off hide class from all fakeusers
+			$(`#fakeuser${i}`).removeClass("hide") //this just goes through and takes off hide class compatible fakeusers
 		}
 	}
 }
-
-var APIcalls = $("#showHor").on("click", function (e) {
-	userzip = $("#zipcodes :selected").val(); // The value of the selected option
-	console.log(userzip);
-	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${fakeuserzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`;
-	mapAjaxCall();
-	selectedSign = $("#birthday-input :selected").val();
-	console.log(selectedSign);
-	scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
-	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[0].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
-	getScope();
-	mapAjaxCall();
-	// userzip = ($("#zipcodes").prop('selectedIndex'));
-	// fakeuserzip = allFakeUsers.forEach(function(idx){
-	// 	idx
-	})
-
-
-	
 
 function compatability() {
 	switch (selectedSign) {
@@ -268,7 +233,23 @@ function compatability() {
 	}
 }
 
+$("#showHor").on("click",function() {
+	userzip = $("#zipcodes :selected").val(); // The value of the selected option
+	console.log(userzip);
+	selectedSign = $("#birthday-input :selected").val();
+	console.log(selectedSign);
+	scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
+	var urls = [];
+	// var geturls = function () {
+	for (i=0; i<allFakeUsers.length; i++) {
+		mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[i].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
 
+		mapAjaxCall();
+
+		
+	}
+	getScope();
+});
 // Show Cards on Click
 $("#showLovers").on("click", function () {
 	$("#daily").addClass("hide");
@@ -280,4 +261,3 @@ $("#hideLovers").on("click", function () {
 	$("#daily").removeClass("hide");
 	$("#weHere").addClass("hide");
 })
-
