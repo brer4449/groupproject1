@@ -49,12 +49,15 @@ function horoscopeSetLocalStorage(userzip) {
 //MAPQUEST
 let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
 //original directions url:
-//https://www.mapquestapi.com/directions/v2/route?key=KEY&from=Denver%2C+CO&to=Boulder%2C+CO&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false
+
 let mapQueryUrl = `http://www.mapquestapi.com/geocoding/v1/address?key=${mapAPIKey}&location=2080202&thumbMaps=false`
+
 //This variable will be the fake user's zip (determined by compatability?):
-let fakeuserzip;
+let fakeuserzip = 80303;
 //Initializing user zip code:
-let userzip;
+let userzip = 20895;
+
+mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${fakeuserzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`;
 
 function mapAjaxCall() {
 	$.ajax({
@@ -179,107 +182,88 @@ let allFakeUsers = [
 ]
 
 
+
+function findMatch(goodMatch, allFakeUsers) {
+	for (let i = 0; i < allFakeUsers.length; i++) {
+		fakeUserSign = $(`#fakeuser${i}`).attr("value")
+		// console.log(fakeUserSign);
+		if (goodMatch.includes(fakeUserSign)) {
+			$(`#fakeuser${i}`).removeClass("hide") //this just goes through and takes off hide class from all fakeusers
+		}
+	}
+}
+
 var APIcalls = $("#showHor").on("click", function (e) {
 	userzip = $("#zipcodes :selected").val(); // The value of the selected option
 	console.log(userzip);
+	mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${fakeuserzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`;
+	mapAjaxCall();
 	selectedSign = $("#birthday-input :selected").val();
 	console.log(selectedSign);
 	getScope();
 });
 
-//on the right track? not quite right tho
-// let goodMatch;
-// let i;
-// function comparingMatches(goodMatch, i) {
-// 	let fakeUserSign = $(`#fakeuser${i}`).attr("value");
-// 	if (fakeUserSign == goodMatch[i]) {
-// 		console.log(`In the if statement: ${goodMatch[i]}`);
-// 		$(`#fakeuser${i}`).removeClass("hide") //this just goes through and takes off hide class from all fakeusers)
-// 	}
-// }
-
-//function to go through all the different fake users and check what compatability there is (aka goodMatch array)
-function findMatch(goodMatch) {
-	for (let i = 1; i < 26; i++) {
-		let fakeUserSign = $(`#fakeuser${i}`).attr("value")
-		// console.log(goodMatch.includes(fakeUserSign));
-		// console.log(`In the for loop: ${goodMatch[i]}`);
-		// comparingMatches(goodMatch, i); //this was for the failed function above
-		// if (fakeUserSign == goodMatch[i]) {
-		// console.log(`In the if statement: ${goodMatch[i]}`);
-		// $(`#fakeuser${i}`).removeClass("hide") //this just goes through and takes off hide class from all fakeusers
-		// console.log(goodMatch[i]) // returning nothing, undefined?
-		console.log(allFakeUsers[i].zip);
-	}
-	// console.log($(`#fakeuser${i}`).attr("value")) //this shows the sign of each user (as expected)
-	// }
-	console.log(goodMatch);	//this returns the goodMatch array of whatever sign you click on!
-}
-
-
 function compatability() {
 	switch (selectedSign) {
 		case "aries":
 			goodMatch = ["pisces", "aries", "leo", "sagittarius", "gemini", "libra", "aquarius"]
-			findMatch(goodMatch);
-			console.log(findMatch(goodMatch)); //this is undefined!!
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "taurus":
 			goodMatch = ["taurus", "virgo", "capricorn", "cancer", "scorpio", "pisces"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "gemini":
 			goodMatch = ["aries", "leo", "gemini", "libra", "aquarius"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "cancer":
 			goodMatch = ["taurus", "virgo", "capricorn", "cancer", "scorpio", "pisces"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "leo":
 			goodMatch = ["aries", "leo", "sagittarius", "gemini", "libra"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "virgo":
 			goodMatch = ["taurus", "virgo", "capricorn", "cancer", "scorpio"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "libra":
 			goodMatch = ["leo", "sagittarius", "gemini", "libra", "aquarius"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "scorpio":
 			goodMatch = ["taurus", "virgo", "capricorn", "cancer", "scorpio", "pisces"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "sagittarius":
 			goodMatch = ["aries", "leo", "sagittarius", "gemini", "libra", "aquarius"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "capricorn":
 			goodMatch = ["taurus", "virgo", "capricorn", "cancer", "scorpio", "pisces"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "aquarius":
 			goodMatch = ["leo", "aries", "sagittarius", "gemini", "libra", "aquarius"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		case "pisces":
 			goodMatch = ["taurus", "capricorn", "cancer", "scorpio", "pisces"]
-			findMatch(goodMatch);
+			findMatch(goodMatch, allFakeUsers);
 			break;
 		default:
 			alert('Enter a sign')
 			break;
 	}
-	// console.log(goodMatch); //when sign is selected, that sign's goodMatch returns here! (as expected)
 }
 
 // Show Cards on Click
 $("#showLovers").on("click", function () {
 	$("#daily").addClass("hide");
 	$("#weHere").removeClass("hide");
-	compatability();
+	compatability(allFakeUsers);
 })
 // Hide Cards on Click- pretty sure this does nothing? Couldn't find anything with a "hideLovers" id
 $("#hideLovers").on("click", function () {
