@@ -5,19 +5,23 @@ $(document).ready(function () {
 	$('.carousel').carousel();
 	autoplay();
 });
+
 // Carousel auto slide
 function autoplay() {
 	$('.carousel').carousel('next');
 	setTimeout(autoplay, 3000);
 }
+
 //  Show Horoscope on click
 $("#showHor").on("click", function () {
 	$("#inputDataHere").addClass("hide");
 	$("#daily").removeClass("hide");
 })
+
 //variables for horoscope api
 let scopeURL = "https://aztro.sameerkumar.website?sign=aries&day=today";
 let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
+
 //horoscope api call function
 function getScope() {
 	$.ajax({
@@ -32,13 +36,14 @@ function getScope() {
 
 	});
 };
+
 function horoscopeSetLocalStorage(userzip) {
 	let savedZip = JSON.parse(localStorage.getItem("savedZip")) || [];
 	savedZip.push(userzip);
 	localStorage.setItem("savedZip", JSON.stringify(savedZip));
 	userzip = savedZip[savedZip.length - 1];
-	userzip = parseInt(userzip);
 }
+
 //MAPQUEST
 let mapAPIKey = "19ObWX0Nw2vIDzYqg9vODBXcBzvsPj1l";
 //original directions url:
@@ -48,6 +53,7 @@ let fakeuserzip;
 //Initializing user zip code:
 let userzip = 20895;
 mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${fakeuserzip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`;
+
 function mapAjaxCall() {
 	$.ajax({
 		url: mapQueryUrl,
@@ -58,115 +64,118 @@ function mapAjaxCall() {
 		console.log(response);
 	})
 }
+
 function mapSetLocalStorage(userzip) {
 	let savedZip = JSON.parse(localStorage.getItem("savedZip")) || [];
 	savedZip.push(userzip);
 	localStorage.setItem("savedZip", JSON.stringify(savedZip));
 	userzip = savedZip[savedZip.length - 1];
 }
+
 //array of objects of all the fakeusers with their zip and jquery selector of where the distance will go
 let allFakeUsers = [
 	fakeUser1 = {
-		distancetext: $("#user1-distance"),
+		distancetext: $("#user0-distance"),
 		zip: 20017
 	},
 	fakeUser2 = {
-		distancetext: $("#user2-distance"),
+		distancetext: $("#user1-distance"),
 		zip: 20068
 	},
 	fakeUser3 = {
-		distancetext: $("#user3-distance"),
+		distancetext: $("#user2-distance"),
 		zip: 20208
 	},
 	fakeUser4 = {
-		distancetext: $("#user4-distance"),
+		distancetext: $("#user3-distance"),
 		zip: 20241
 	},
 	fakeUser5 = {
-		distancetext: $("#user5-distance"),
+		distancetext: $("#user4-distance"),
 		zip: 20380
 	},
 	fakeUser6 = {
-		distancetext: $("#user6-distance"),
+		distancetext: $("#user5-distance"),
 		zip: 20412
 	},
 	fakeUser7 = {
-		distancetext: $("#user7-distance"),
+		distancetext: $("#user6-distance"),
 		zip: 20422
 	},
 	fakeUser8 = {
-		distancetext: $("#user8-distance"),
+		distancetext: $("#user7-distance"),
 		zip: 20456
 	},
 	fakeUser9 = {
-		distancetext: $("#user9-distance"),
+		distancetext: $("#user8-distance"),
 		zip: 20261
 	},
 	fakeUser10 = {
-		distancetext: $("#user10-distance"),
+		distancetext: $("#user9-distance"),
 		zip: 20057
 	},
 	fakeUser11 = {
-		distancetext: $("#user11-distance"),
+		distancetext: $("#user10-distance"),
 		zip: 20002
 	},
 	fakeUser12 = {
-		distancetext: $("#user12-distance"),
+		distancetext: $("#user11-distance"),
 		zip: 20074
 	},
 	fakeUser13 = {
-		distancetext: $("#user13-distance"),
+		distancetext: $("#user12-distance"),
 		zip: 20221
 	},
 	fakeuser14 = {
-		distancetext: $("#user14-distance"),
+		distancetext: $("#user13-distance"),
 		zip: 20307
 	},
 	fakeuser15 = {
-		distancetext: $("#user15-distance"),
+		distancetext: $("#user14-distance"),
 		zip: 20388
 	},
 	fakeuser16 = {
-		distancetext: $("#user16-distance"),
+		distancetext: $("#user15-distance"),
 		zip: 20439
 	},
 	fakeuser17 = {
-		distancetext: $("#user17-distance"),
+		distancetext: $("#user16-distance"),
 		zip: 20268
 	},
 	fakeuser18 = {
-		distancetext: $("#user18-distance"),
+		distancetext: $("#user17-distance"),
 		zip: 20097
 	},
 	fakeuser19 = {
-		distancetext: $("#user19-distance"),
+		distancetext: $("#user18-distance"),
 		zip: 20404
 	},
 	fakeuser20 = {
-		distancetext: $("#user20-distance"),
+		distancetext: $("#user19-distance"),
 		zip: 20237
 	},
 	fakeuser21 = {
-		distancetext: $("#user21-distance"),
+		distancetext: $("#user20-distance"),
 		zip: 20444
 	},
 	fakeuser22 = {
-		distancetext: $("#user22-distance"),
+		distancetext: $("#user21-distance"),
 		zip: 20241
 	},
 	fakeuser23 = {
-		distancetext: $("#user23-distance"),
+		distancetext: $("#user22-distance"),
 		zip: 20580
 	},
 	fakeuser24 = {
-		distancetext: $("#user24-distance"),
+		distancetext: $("#user23-distance"),
 		zip: 56999
 	},
 	fakeuser25 = {
-		distancetext: $("#user25-distance"),
+		distancetext: $("#user24-distance"),
 		zip: 20555
 	}
 ]
+
 function findMatch(goodMatch, allFakeUsers) {
 	for (let i = 0; i < allFakeUsers.length; i++) {
 		fakeUserSign = $(`#fakeuser${i}`).attr("value")
@@ -233,29 +242,26 @@ function compatability() {
 	}
 }
 
-$("#showHor").on("click",function() {
+$("#showHor").on("click", function () {
 	userzip = $("#zipcodes :selected").val(); // The value of the selected option
 	console.log(userzip);
 	selectedSign = $("#birthday-input :selected").val();
 	console.log(selectedSign);
-	scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
-	var urls = [];
-	// var geturls = function () {
-	for (i=0; i<allFakeUsers.length; i++) {
+	scopeURL = "https://aztro.sameerkumar.website?sign=" + selectedSign + "&day=today";
+	for (i = 0; i < allFakeUsers.length; i++) {
 		mapQueryUrl = `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[i].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`
-
 		mapAjaxCall();
-
-		
 	}
 	getScope();
 });
+
 // Show Cards on Click
 $("#showLovers").on("click", function () {
 	$("#daily").addClass("hide");
 	$("#weHere").removeClass("hide");
 	compatability(allFakeUsers);
 })
+
 // Hide Cards on Click- pretty sure this does nothing? Couldn't find anything with a "hideLovers" id
 $("#hideLovers").on("click", function () {
 	$("#daily").removeClass("hide");
