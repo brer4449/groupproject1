@@ -11,13 +11,13 @@ function autoplay() {
 	setTimeout(autoplay, 3000);
 }
 
-// Hides chatroom and shows messenger when cliked on arrow button
+// Hides chatroom and shows messenger  arrow button is clicked in chatroom
 $("#back-btn").on("click", function(){
 $("#chat").addClass("hide");
 $("#messenger").removeClass("hide");
 })
 
-// if any of the images in messenger cliked, it will hide messenger and show chatroom
+// if any of the images in messenger cliked, this function will hide messenger and show chatroom
 $(".chat-pic").on("click", function(){
 	$("#messenger").addClass("hide");
 	$("#chat").removeClass("hide");
@@ -42,8 +42,10 @@ function getScope() {
 			appid: scopeApiKey
 		}
 	}).then(function (response) {
+		
 		console.log(response.description);
-		$("#daily-scope").text(`${response.description}`)
+
+		$("#daily-scope").text(`${response.description}`);
 
 	});
 };
@@ -259,17 +261,12 @@ function compatability() {
 
 
 
-
-// function map1 () {
-
-// }
-
-
 $(document).on("click", "#showHor", function() {
 	userzip = $("#zipcodes :selected").val(); // The value of the selected option
 	console.log(userzip);
 	selectedSign = $("#birthday-input :selected").val();
 	console.log(selectedSign);
+	$("#your-sign").text("Your astrological sign: " + selectedSign);
 	scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
 	getScope();
 	mapAjaxCall0();
