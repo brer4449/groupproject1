@@ -36,7 +36,7 @@
         <br>
     </div>
 
-    <!-- Chatroom -->
+    <!--prototype of messenger. Will only show if user clicks on arrow button in chatroom-->
     <br><br>
 
     <div class="row center align" id="daily" style="margin-bottom: 80px">
@@ -44,7 +44,7 @@
             <div class="card">
 
                 <div id="messenger" class="hide">
-                    <h4><b>Chats</b></h4>
+                    <h4><b><i class="material-icons prefix" style="color:red">favorite_border</i>Chats</b><i class="material-icons prefix" style="color:red">favorite_border</i></h4>
 
                     <div class="collection">
                         <div class="row">
@@ -59,22 +59,26 @@
                             </form>
                         </div>
 
-
+                        <!--using materialize component "chip" for making avatar images with placeholder for name-->
                         <div class="chip chat-pic">
                             <img src="assets/images/userPics/cardi-b-1.jpg" alt="Contact Person">
                             Cardi
+                            <i class="close material-icons" style="color:lightgreen">lens</i>
                         </div>
                         <div class="chip chat-pic">
                             <img src="assets/images/userPics/justin-bieber-baby.jpg" alt="Contact Person">
                             Justin
+                            <i class="close material-icons" style="color:lightgreen">lens</i>
                         </div>
                         <div class="chip chat-pic">
                             <img src="assets/images/userPics/snow.jpeg" alt="Contact Person">
                             Snow
+                            <i class="close material-icons">lens</i>
                         </div>
 
                         <br><br>
 
+                        <!--using materialize component "avatar" for making prototype of user's mesage history-->
                         <ul class="collection">
                             <li class="collection-item avatar">
                                 <img src="assets/images/userPics/Obama.jpg" alt="" class="circle chat-pic">
@@ -102,10 +106,10 @@
                     <div class="card-content">
                         <div class="row">
                             <div id="back-btn" class="arrow-btn col s1 m1">
-                                <a class="btn-floating btn waves-effect waves-light pink darken-3"><i
+                                <a class="btn-floating btn waves-effect waves-light pink darken-3" ><i
                                         class="material-icons">chevron_left</i></a>
                             </div>
-                            <div class="col s5 m5">
+                            <div class="col s7 m7">
                                 <div class="chip">
                                     <img src="assets/images/userPics/trumpDumb.jpg" alt="Contact Person">
                                     Donald Trump
@@ -119,32 +123,48 @@
 
                     <div class="row">
 
-                        <div class="arrow-btn col s1 m1">
+                        <div class="pic col s1 m1">
+                            <i class="material-icons"  style="color:darkred">gif</i></a> 
+                         </div>
+
+                        <!-- <div class="arrow-btn col s1 m1">
                             <a class="btn-floating btn waves-effect waves-light grey"><i
-                                    class="material-icons">gif</i></a>
-                        </div>
+                                    class="material-icons"></i></a>
+                        </div> -->
+                        <div class="pic col s1 m1">
+                            <i class="material-icons"  style="color:darkred">add_a_photo</i></a> 
+                         </div>
 
-
-                        <div class="arrow-btn col s1 m1">
+                        <!-- <div class="arrow-btn col s1 m1">
                             <a class="btn-floating btn waves-effect waves-light grey"><i
                                     class="material-icons">add_a_photo</i></a>
-                        </div>
+                        </div> -->
 
-                        <div class="arrow-btn col s1 m1">
-                            <a class="btn-floating btn waves-effect waves-light pink grey"><i
+                        <div class="pic col s1 m1">
+                            <i class="material-icons"  style="color:darkred">language</i></a> 
+                         </div>
+
+                        <!-- <div class="arrow-btn col s1 m1">
+                            <a class="btn-floating btn waves-effect waves-light  grey"><i
                                     class="material-icons">language</i></a>
-                        </div>
+                        </div> -->
 
+                        <div class="pic col s1 m1">
+                            <i class="material-icons"  style="color:darkred">insert_emoticon</i></a> 
+                         </div>
 
-                        <div class="arrow-btn col s1 m1">
+                        <!-- <div class="arrow-btn col s1 m1">
                             <a class="btn-floating btn waves-effect waves-light pink grey"><i
                                     class="material-icons">insert_emoticon</i></a>
-                        </div>
+                        </div> -->
 
-                        <div class="arrow-btn col s1 m1">
+                        <div class="pic col s1 m1">
+                            <i class="material-icons"  style="color:darkred">thumb_up</i></a> 
+                         </div>
+                        <!-- <div class="arrow-btn col s1 m1">
                             <a class="btn-floating btn waves-effect waves-light pink grey"><i
                                     class="material-icons">thumb_up</i></a>
-                        </div>
+                        </div> -->
 
 
                         <div class="pic input-field col s6 m6">
