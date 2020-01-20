@@ -2,6 +2,7 @@
 $(document).ready(function () {
 	$('select').formSelect(); // materialize plugin for form where user is selecting birthday and zip
 	$('.carousel').carousel();
+	$('.dropdown-trigger').dropdown(); // materialize plugin for 'my account' button
 	autoplay();
 });
 
@@ -11,7 +12,14 @@ function autoplay() {
 	setTimeout(autoplay, 3000);
 }
 
-// Hides chatroom and shows messenger  arrow button is clicked in chatroom
+$(".login-form").on("click", function(){
+console.log(".login-form");
+$("#sign-up").addClass("hide");
+$("#login").removeClass("hide");
+})
+
+
+// Hides chatroom and shows messenger if arrow button is clicked in chatroom
 $("#back-btn").on("click", function(){
 $("#chat").addClass("hide");
 $("#messenger").removeClass("hide");
