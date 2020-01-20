@@ -1,7 +1,6 @@
 // Initialization on document ready
 $(document).ready(function () {
-	$('select').formSelect();
-	$('.collapsible').collapsible();
+	$('select').formSelect(); // materialize plugin for form where user is selecting birthday and zip
 	$('.carousel').carousel();
 	autoplay();
 });
@@ -11,6 +10,18 @@ function autoplay() {
 	$('.carousel').carousel('next');
 	setTimeout(autoplay, 3000);
 }
+
+// Hides chatroom and shows messenger when cliked on arrow button
+$("#back-btn").on("click", function(){
+$("#chat").addClass("hide");
+$("#messenger").removeClass("hide");
+})
+
+// if any of the images in messenger cliked, it will hide messenger and show chatroom
+$(".chat-pic").on("click", function(){
+	$("#messenger").addClass("hide");
+	$("#chat").removeClass("hide");
+})
 
 //  Show Horoscope on click
 $("#showHor").on("click", function () {
