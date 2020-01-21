@@ -12,21 +12,20 @@ function autoplay() {
 	setTimeout(autoplay, 3000);
 }
 
-$(".login-form").on("click", function(){
-console.log(".login-form");
-$("#sign-up").addClass("hide");
-$("#login").removeClass("hide");
+$(".login-form").on("click", function () {
+	console.log(".login-form");
+	$("#sign-up").addClass("hide");
+	$("#login").removeClass("hide");
 })
 
-
 // Hides chatroom and shows messenger if arrow button is clicked in chatroom
-$("#back-btn").on("click", function(){
-$("#chat").addClass("hide");
-$("#messenger").removeClass("hide");
+$("#back-btn").on("click", function () {
+	$("#chat").addClass("hide");
+	$("#messenger").removeClass("hide");
 })
 
 // if any of the images in messenger cliked, this function will hide messenger and show chatroom
-$(".chat-pic").on("click", function(){
+$(".chat-pic").on("click", function () {
 	$("#messenger").addClass("hide");
 	$("#chat").removeClass("hide");
 })
@@ -48,7 +47,6 @@ $("#hideLovers").on("click", function () {
 	$("#weHere").addClass("hide");
 })
 
-
 //variables for horoscope api
 let scopeURL = "https://aztro.sameerkumar.website?sign=aries&day=today";
 let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
@@ -62,11 +60,8 @@ function getScope() {
 			appid: scopeApiKey
 		}
 	}).then(function (response) {
-		
-		console.log(response.description);
-
+		// console.log(response.description);
 		$("#daily-scope").text(`${response.description}`);
-
 	});
 };
 
@@ -78,6 +73,7 @@ function horoscopeSetLocalStorage(userzip) {
 }
 
 var alldemusers = [$("#user0-distance"), $("#user1-distance"), $("#user2-distance"), $("#user3-distance"), $("#user4-distance"), $("#user5-distance"), $("#user6-distance"), $("#user7-distance"), $("#user8-distance"), $("#user9-distance"), $("#user10-distance"), $("#user11-distance"), $("#user12-distance"), $("#user13-distance"), $("#user14-distance"), $("#user15-distance"), $("#user16-distance"), $("#user17-distance"), $("#user18-distance"), $("#user19-distance"), $("#user20-distance"), $("#user21-distance"), $("#user22-distance"), $("#user23-distance"), $("#user24-distance")]
+
 //MAPQUEST
 let mapAPIKey = "wfAvATrJ0FOfJ0vTKskRjvLYXVZxVKAA";
 //original directions url:
@@ -94,8 +90,8 @@ function mapAjaxCall0() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[0].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user0-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -222,6 +218,7 @@ function findMatch(goodMatch, allFakeUsers) {
 	}
 }
 
+//function that contains switch statement to determine compatible matches
 function compatability() {
 	switch (selectedSign) {
 		case "aries":
@@ -278,16 +275,14 @@ function compatability() {
 	}
 }
 
-
-
-
-$(document).on("click", "#showHor", function() {
+//On click function to grab the value of the selected item from dropdown, and then set the text of each fake user to display how far they are from current user
+$(document).on("click", "#showHor", function () {
 	userzip = $("#zipcodes :selected").val(); // The value of the selected option
-	console.log(userzip);
-	selectedSign = $("#birthday-input :selected").val();
-	console.log(selectedSign);
+	// console.log(userzip);
+	selectedSign = $("#birthday-input :selected").val(); // The value of the selected option
+	// console.log(selectedSign);
 	$("#your-sign").text("Your astrological sign: " + selectedSign);
-	scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
+	scopeURL = "https://aztro.sameerkumar.website?sign=" + selectedSign + "&day=today";
 	getScope();
 	mapAjaxCall0();
 	mapAjaxCall1();
@@ -316,12 +311,13 @@ $(document).on("click", "#showHor", function() {
 	mapAjaxCall24();
 });
 
+//fucking yikes. but hey! it works!
 function mapAjaxCall1() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[1].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user1-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -330,8 +326,8 @@ function mapAjaxCall2() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[2].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user2-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -340,8 +336,8 @@ function mapAjaxCall3() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[3].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user3-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -350,8 +346,8 @@ function mapAjaxCall4() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[4].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user4-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -360,8 +356,8 @@ function mapAjaxCall5() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[5].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user5-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -370,8 +366,8 @@ function mapAjaxCall6() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[6].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user6-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -380,8 +376,8 @@ function mapAjaxCall7() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[7].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user7-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -390,8 +386,8 @@ function mapAjaxCall8() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[8].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user8-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -400,8 +396,8 @@ function mapAjaxCall9() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[9].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user9-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -410,8 +406,8 @@ function mapAjaxCall10() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[10].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user10-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -420,8 +416,8 @@ function mapAjaxCall11() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[11].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user11-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -430,8 +426,8 @@ function mapAjaxCall12() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[12].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user12-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -440,8 +436,8 @@ function mapAjaxCall13() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[13].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user13-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -450,8 +446,8 @@ function mapAjaxCall14() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[14].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user14-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -460,8 +456,8 @@ function mapAjaxCall15() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[15].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user15-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -470,8 +466,8 @@ function mapAjaxCall16() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[16].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user16-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -480,8 +476,8 @@ function mapAjaxCall17() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[17].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user17-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -490,8 +486,8 @@ function mapAjaxCall18() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[18].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user18-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -500,8 +496,8 @@ function mapAjaxCall19() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[19].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user19-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -510,8 +506,8 @@ function mapAjaxCall20() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[20].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user20-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -520,8 +516,8 @@ function mapAjaxCall21() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[21].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user21-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -530,8 +526,8 @@ function mapAjaxCall22() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[22].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user22-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -540,8 +536,8 @@ function mapAjaxCall23() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[23].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user23-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
@@ -550,9 +546,8 @@ function mapAjaxCall24() {
 	$.ajax({
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[24].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
-	}).then(function (response){
-		console.log(response.route.distance)
+	}).then(function (response) {
+		// console.log(response.route.distance)
 		$("#user24-distance").text(`This user is ${response.route.distance} miles away`)
 	})
 }
-
