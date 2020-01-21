@@ -12,12 +12,6 @@ function autoplay() {
 	setTimeout(autoplay, 3000);
 }
 
-$(".login-form").on("click", function(){
-console.log(".login-form");
-$("#sign-up").addClass("hide");
-$("#login").removeClass("hide");
-})
-
 
 // Hides chatroom and shows messenger if arrow button is clicked in chatroom
 $("#back-btn").on("click", function(){
@@ -39,7 +33,7 @@ $("#showHor").on("click", function () {
 
 //variables for horoscope api
 let scopeURL = "https://aztro.sameerkumar.website?sign=aries&day=today";
-let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
+let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22";
 
 //horoscope api call function
 function getScope() {
@@ -50,10 +44,11 @@ function getScope() {
 			appid: scopeApiKey
 		}
 	}).then(function (response) {
-		
+		console.log(response);
 		console.log(response.description);
 
 		$("#daily-scope").text(`${response.description}`);
+	    $("#current-date").text(`${response.current_date}`)
 
 	});
 };
@@ -83,6 +78,7 @@ function mapAjaxCall0() {
 		url: `https://www.mapquestapi.com/directions/v2/route?key=${mapAPIKey}&from=${userzip}&to=${allFakeUsers[0].zip}&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false`,
 		method: "GET"
 	}).then(function (response){
+		console.log(response);
 		console.log(response.route.distance)
 		$("#user0-distance").text(`This user is ${response.route.distance} miles away`)
 	})
@@ -273,8 +269,8 @@ $(document).on("click", "#showHor", function() {
 	userzip = $("#zipcodes :selected").val(); // The value of the selected option
 	console.log(userzip);
 	selectedSign = $("#birthday-input :selected").val();
-	console.log(selectedSign);
-	$("#your-sign").text("Your astrological sign: " + selectedSign);
+	console.log(selectedSign); 
+	$("#your-sign").text("Your astrological sign: " + selectedSign); // telling user what their sign is, it's displayed on top daily scope
 	scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
 	getScope();
 	mapAjaxCall0();
