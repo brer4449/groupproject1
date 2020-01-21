@@ -1,8 +1,8 @@
 // Initialization on document ready
 $(document).ready(function () {
-	$('select').formSelect();
-	$('.collapsible').collapsible();
+	$('select').formSelect(); // materialize plugin for form where user is selecting birthday and zip
 	$('.carousel').carousel();
+	$('.dropdown-trigger').dropdown(); // materialize plugin for 'my account' button
 	autoplay();
 });
 
@@ -11,6 +11,25 @@ function autoplay() {
 	$('.carousel').carousel('next');
 	setTimeout(autoplay, 3000);
 }
+
+$(".login-form").on("click", function(){
+console.log(".login-form");
+$("#sign-up").addClass("hide");
+$("#login").removeClass("hide");
+})
+
+
+// Hides chatroom and shows messenger if arrow button is clicked in chatroom
+$("#back-btn").on("click", function(){
+$("#chat").addClass("hide");
+$("#messenger").removeClass("hide");
+})
+
+// if any of the images in messenger cliked, this function will hide messenger and show chatroom
+$(".chat-pic").on("click", function(){
+	$("#messenger").addClass("hide");
+	$("#chat").removeClass("hide");
+})
 
 //  Show Horoscope on click
 $("#showHor").on("click", function () {
@@ -43,8 +62,10 @@ function getScope() {
 			appid: scopeApiKey
 		}
 	}).then(function (response) {
+		
 		console.log(response.description);
-		$("#daily-scope").text(`${response.description}`)
+
+		$("#daily-scope").text(`${response.description}`);
 
 	});
 };
@@ -260,17 +281,12 @@ function compatability() {
 
 
 
-
-// function map1 () {
-
-// }
-
-
 $(document).on("click", "#showHor", function() {
 	userzip = $("#zipcodes :selected").val(); // The value of the selected option
 	console.log(userzip);
 	selectedSign = $("#birthday-input :selected").val();
 	console.log(selectedSign);
+	$("#your-sign").text("Your astrological sign: " + selectedSign);
 	scopeURL = "https://aztro.sameerkumar.website?sign="+selectedSign+"&day=today";
 	getScope();
 	mapAjaxCall0();
