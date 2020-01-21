@@ -47,8 +47,8 @@ function getScope() {
 		console.log(response);
 		console.log(response.description);
 
-		$("#daily-scope").text(`${response.description}`);
-	    $("#current-date").text(`${response.current_date}`)
+		$("#daily-scope").text(`${response.description}`); // daily horoscope
+	    $("#current-date").text(`${response.current_date}`); // current date for daily horoscope
 
 	});
 };
@@ -198,7 +198,7 @@ let allFakeUsers = [
 
 function findMatch(goodMatch, allFakeUsers) {
 	for (let i = 0; i < allFakeUsers.length; i++) {
-		fakeUserSign = $(`#fakeuser${i}`).attr("value")
+		fakeUserSign = $(`#fakeuser${i}`).attr("value");
 		// console.log(fakeUserSign);
 		if (goodMatch.includes(fakeUserSign)) {
 			$(`#fakeuser${i}`).removeClass("hide") //this just goes through and takes off hide class compatible fakeusers
