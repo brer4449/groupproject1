@@ -36,6 +36,18 @@ $("#showHor").on("click", function () {
 	$("#inputDataHere").addClass("hide");
 	$("#daily").removeClass("hide");
 })
+// Show Cards on Click
+$("#showLovers").on("click", function () {
+	$("#daily").addClass("hide");
+	$("#weHere").removeClass("hide");
+	compatability(allFakeUsers);
+})
+// Hide Cards on Click
+$("#hideLovers").on("click", function () {
+	$("#daily").removeClass("hide");
+	$("#weHere").addClass("hide");
+})
+
 
 //variables for horoscope api
 let scopeURL = "https://aztro.sameerkumar.website?sign=aries&day=today";
@@ -303,19 +315,6 @@ $(document).on("click", "#showHor", function() {
 	mapAjaxCall23();
 	mapAjaxCall24();
 });
-
-// Show Cards on Click
-$("#showLovers").on("click", function () {
-	$("#daily").addClass("hide");
-	$("#weHere").removeClass("hide");
-	compatability(allFakeUsers);
-})
-
-// Hide Cards on Click- pretty sure this does nothing? Couldn't find anything with a "hideLovers" id
-$("#hideLovers").on("click", function () {
-	$("#daily").removeClass("hide");
-	$("#weHere").addClass("hide");
-})
 
 function mapAjaxCall1() {
 	$.ajax({
