@@ -19,7 +19,7 @@ $("#showHor").on("click", function () {
 
 //variables for horoscope api
 let scopeURL = "https://aztro.sameerkumar.website?sign=aries&day=today";
-let scopeApiKey = "db33035934mshd1b34ca9cd0fe88p1ebc13jsnd29e5614fd22"
+let scopeApiKey = "aa3dd9aaf7msh72e32624a82ff64p19458djsnf620a5c313c0"
 
 //horoscope api call function
 function getScope() {
