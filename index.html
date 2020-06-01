@@ -1,756 +1,1085 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <!-- Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Materialize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>StarXed</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <!-- Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Materialize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- CSS Style Sheet -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <title>StarXed</title>
-</head>
+  <body>
+    <!-- Nav Bar -->
+    <nav class="pink darken-2">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">StarXed</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page3.html">Compatibility Chart</a></li>
+          <!-- Dropdown Trigger -->
+          <a
+            class="dropdown-trigger btn pink darken-2"
+            href="#"
+            data-target="dropdown1"
+            >My account</a
+          >
 
-<body>
-  <!-- Nav Bar -->
-  <nav class="pink darken-2">
-    <div class="nav-wrapper">
-      <a href="index.html" class="brand-logo">StarXed</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="page3.html">Compatibility Chart</a></li>
-        <!-- Dropdown Trigger -->
-        <a class='dropdown-trigger btn pink darken-2' href='#' data-target='dropdown1'>My account</a>
-
-        <!-- Dropdown Structure -->
-        <ul id='dropdown1' class='dropdown-content'>
-          <li><a href="login.html">Log in</a></li>
-          <li><a href="signup.html">Sign up</a></li>
+          <!-- Dropdown Structure -->
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+          </ul>
         </ul>
-      </ul>
+      </div>
+    </nav>
+    <!-- Headers -->
+    <div class="headers">
+      <h1 class="center align">Do you want to meet your star crossed lover?</h1>
+      <h2 class="center align">Your daily horoscope and matchmaking site!</h2>
+      <br />
     </div>
-  </nav>
-  <!-- Headers -->
-  <div class="headers">
-    <h1 class="center align">Do you want to meet your star crossed lover?</h1>
-    <h2 class="center align">Your daily horoscope and matchmaking site!</h2>
-    <br>
-  </div>
 
-  <!-- carousel -->
-  <div class="container">
-    <div class="carousel" style="margin-bottom: 80px">
-      <a class="carousel-item" href="#twelve!"><img src="assets/images/carousel/piscescar.jpg"></a>
-      <a class="carousel-item" href="#one!"><img src="assets/images/carousel/arcar.jpg"></a>
-      <a class="carousel-item" href="#two!"><img src="assets/images/carousel/taurcar.jpg"></a>
-      <a class="carousel-item" href="#three!"><img src="assets/images/carousel/gemcar.jpg"></a>
-      <a class="carousel-item" href="#four!"><img src="assets/images/carousel/cancar.jpg"></a>
-      <a class="carousel-item" href="#five!"><img src="assets/images/carousel/leocar.jpg"></a>
-      <a class="carousel-item" href="#six!"><img src="assets/images/carousel/vircar.jpg"></a>
-      <a class="carousel-item" href="#seven!"><img src="assets/images/carousel/libcar.jpg"></a>
-      <a class="carousel-item" href="#eight!"><img src="assets/images/carousel/scorcar.jpg"></a>
-      <a class="carousel-item" href="#nine!"><img src="assets/images/carousel/sagcar.jpg"></a>
-      <a class="carousel-item" href="#ten!"><img src="assets/images/carousel/capcar.jpg"></a>
-      <a class="carousel-item" href="#eleven!"><img src="assets/images/carousel/aqucar.jpg"></a>
+    <!-- carousel -->
+    <div class="container">
+      <div class="carousel" style="margin-bottom: 80px;">
+        <a class="carousel-item" href="#twelve!"
+          ><img src="assets/images/carousel/piscescar.jpg"
+        /></a>
+        <a class="carousel-item" href="#one!"
+          ><img src="assets/images/carousel/arcar.jpg"
+        /></a>
+        <a class="carousel-item" href="#two!"
+          ><img src="assets/images/carousel/taurcar.jpg"
+        /></a>
+        <a class="carousel-item" href="#three!"
+          ><img src="assets/images/carousel/gemcar.jpg"
+        /></a>
+        <a class="carousel-item" href="#four!"
+          ><img src="assets/images/carousel/cancar.jpg"
+        /></a>
+        <a class="carousel-item" href="#five!"
+          ><img src="assets/images/carousel/leocar.jpg"
+        /></a>
+        <a class="carousel-item" href="#six!"
+          ><img src="assets/images/carousel/vircar.jpg"
+        /></a>
+        <a class="carousel-item" href="#seven!"
+          ><img src="assets/images/carousel/libcar.jpg"
+        /></a>
+        <a class="carousel-item" href="#eight!"
+          ><img src="assets/images/carousel/scorcar.jpg"
+        /></a>
+        <a class="carousel-item" href="#nine!"
+          ><img src="assets/images/carousel/sagcar.jpg"
+        /></a>
+        <a class="carousel-item" href="#ten!"
+          ><img src="assets/images/carousel/capcar.jpg"
+        /></a>
+        <a class="carousel-item" href="#eleven!"
+          ><img src="assets/images/carousel/aqucar.jpg"
+        /></a>
+      </div>
     </div>
-  </div>
-  <!-- Input Form -->
+    <!-- Input Form -->
 
-  <div class="container" id="inputDataHere">
-    <div class="row center align" style="margin-bottom: 80px">
-      <!-- Card 1 -->
+    <div class="container" id="inputDataHere">
+      <div class="row center align" style="margin-bottom: 80px;">
+        <!-- Card 1 -->
+        <div class="col s12 m12 z-depth-2">
+          <div class="card">
+            <h4 style="color: black;">One form to rule them all</h4>
+            <div class="card-content">
+              <p>
+                Don't know your star sign? Want to find out who is your best
+                friend or worst enemy? Fill out the form below to be one step
+                closer to finding not only a partner, but yourself.
+              </p>
+              <!-- Choose Birth Range -->
+              <div class="input-field col s12">
+                <select id="birthday-input">
+                  <option value="" disabled selected
+                    >Choose your date of birth</option
+                  >
+                  <option value="aries">March 21 – April 20</option>
+                  <option value="taurus">April 21 – May 20</option>
+                  <option value="gemini">May 21 – June 21</option>
+                  <option value="cancer"> June 22 – July 22</option>
+                  <option value="leo">July 23 – August 22</option>
+                  <option value="virgo">August 23 – September 22</option>
+                  <option value="libra">September 23 – October 22</option>
+                  <option value="scorpio">October 23 – November 22</option>
+                  <option value="sagittarius">November 23 – December 21</option>
+                  <option value="capricorn">December 22 – January 19</option>
+                  <option value="aquarius"> January 20 – February 18 </option>
+                  <option value="pisces">February 19 – March 20 </option>
+                </select>
+              </div>
+              <!-- Choose Relevant ZIP Code -->
+              <div class="input-field col s12">
+                <select id="zipcodes">
+                  <option value="" disabled selected
+                    >Choose your closest Zipcode</option
+                  >
+                  <option id="1" value="20007">20007</option>
+                  <option id="2" value="20500">20500</option>
+                  <option id="3" value="20036">20036</option>
+                  <option id="4" value="20024">20024</option>
+                  <option id="5" value="20560">20560</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href="#" id="showHor"
+                ><i class="material-icons">brightness_4</i>What's My Star
+                Sign?</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Daily Horoscope -->
+    <!-- id tag daily for showing and hiding -->
+    <div class="row center align" style="margin-bottom: 80px;">
       <div class="col s12 m12 z-depth-2">
-        <div class="card">
-          <h4 style="color:black">One form to rule them all</h4>
+        <div class="card hide" id="daily">
+          <h4 style="color: black;">Here's Your Horoscope for the Day!</h4>
+          <h5 id="current-date"></h5>
+          <h5 id="your-sign"></h5>
           <div class="card-content">
-            <p>Don't know your star sign? Want to find out who is your best friend or worst enemy? Fill out the form
-              below
-              to be one step closer to finding not only a partner, but yourself.</p>
-            <!-- Choose Birth Range -->
-            <div class="input-field col s12">
-              <select id="birthday-input">
-                <option value="" disabled selected>Choose your date of birth</option>
-                <option value="aries">March 21 – April 20</option>
-                <option value="taurus">April 21 – May 20</option>
-                <option value="gemini">May 21 – June 21</option>
-                <option value="cancer"> June 22 – July 22</option>
-                <option value="leo">July 23 – August 22</option>
-                <option value="virgo">August 23 – September 22</option>
-                <option value="libra">September 23 – October 22</option>
-                <option value="scorpio">October 23 – November 22</option>
-                <option value="sagittarius">November 23 – December 21</option>
-                <option value="capricorn">December 22 – January 19</option>
-                <option value="aquarius"> January 20 – February 18 </option>
-                <option value="pisces">February 19 – March 20 </option>
-              </select>
-            </div>
-            <!-- Choose Relevant ZIP Code -->
-            <div class="input-field col s12">
-              <select id="zipcodes">
-                <option value="" disabled selected>Choose your closest Zipcode</option>
-                <option id="1" value="20007">20007</option>
-                <option id="2" value="20500">20500</option>
-                <option id="3" value="20036">20036</option>
-                <option id="4" value="20024">20024</option>
-                <option id="5" value=20560>20560</option>
-              </select>
-            </div>
+            <p id="daily-scope"></p>
           </div>
           <div class="card-action">
-            <a href="#" id="showHor"><i class="material-icons">brightness_4</i>What's My Star Sign?</a>
+            <!-- id tag showLovers for hiding this card and showing next card (matches) -->
+            <a href="#" id="showLovers"
+              ><i class="material-icons">brightness_4</i>Who is in my area?</a
+            >
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Daily Horoscope -->
-  <!-- id tag daily for showing and hiding -->
-  <div class="row center align" style="margin-bottom: 80px">
-    <div class="col s12 m12 z-depth-2">
-      <div class="card hide" id="daily">
-        <h4 style="color:black">Here's Your Horoscope for the Day!</h4>
-        <h5 id="current-date"></h5>
-        <h5 id="your-sign"></h5>
-        <div class="card-content">
-          <p id="daily-scope"></p>
-        </div>
-        <div class="card-action">
-          <!-- id tag showLovers for hiding this card and showing next card (matches) -->
-          <a href="#" id="showLovers"><i class="material-icons">brightness_4</i>Who is in my area?</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2 hidden on document.ready -->
-    <!-- id tag weHere for showing remove class="hide" to show-->
-    <div class="container">
-      <div class="col s12 m12 z-depth-2 hide" id="weHere">
-        <div class="card">
-
-          <!--user profile gets displayed here-->
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser0" value="gemini">
-                <div class="card-image">
-                  <img src="assets/images/userPics/user2.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Donald </span>
-                <div class="card-content">
-                  <h5>Astrological sign: Gemini <img class="sign" src="assets/images/signs/gemini.png"></h5>
-                  <p>Simple guy from New York. I've recently moved to DC and desperatly trying to find love.
-                    I live downtown, my house is pretty big. It's also white and it has walls. I like walls.
-                    If you like walls too maybe we could chat. Alrighty than..
-                  </p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user0-distance" value="20017"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser1" value="scorpio">
-                <div class="card-image">
-                  <img src="assets/images/userPics/heygirl5.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Ryan</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Scorpio <img class="sign" src="assets/images/signs/scorpio.png"></h5>
-                  <p>Girls keep stalking me..and I just want to find someone that I could be myself with..just be
-                    a simple guy..u know..like Donald..so I really like this app..wait a second..my Zipcode?..
-                    and I'm out..
-                  </p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user1-distance" value="20068"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser2" value="capricorn">
-                <div class="card-image">
-                  <img src="assets/images/userPics/user1..png" class="user-image">
-                </div>
-                <span class="card-title"> Jimmy</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Capricorn <img class="sign" src="assets/images/signs/capricorn.png"></h5>
-                  <p>Hi...I'm Jimmy..I love horoscope..I live with my mom..our house is not so big..well not
-                    like Donald's big..it still got walls and stuff..anyway..chat?
-                  </p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user2-distance" value="20208"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser3" value="taurus">
-                <div class="card-image">
-                  <img src="assets/images/userPics/user4.png" class="user-image">
-                </div>
-                <span class="card-title"> Kanye</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Taurus <img class="sign" src="assets/images/signs/taurus.png"></h5>
-                  <p>Sup..u want a piece of Kanye?..
-                  </p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user3-distance" value="20241"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser4" value="aries">
-                <div class="card-image">
-                  <img src="assets/images/userPics/user5.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Daenerys</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Aries <img class="sign" src="assets/images/signs/aries.png"></h5>
-                  <p>Hi..I'm Danny..I gave birth to 3 dragons..pm me for more details..
-                  </p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user4-distance" value="20380"></div>
-                  <i class="material-icons">location_on</i>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser5" value="sagittarius">
-                <div class="card-image">
-                  <img src="assets/images/userPics/gandalfTheGar.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Gandalf the Gary</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Sagittarius <img class="sign" src="assets/images/signs/sagittarius.png">
-                  </h5>
-                  <p>Has all the information but tells none of it..</p>
-                  <p> Grumpy</p>
-                  <p>Secret party animal</p>
-                  <p>Life credo: "When you have a beard you have enough"</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user5-distance" value="20412"></div>
-                  <i class="material-icons">location_on</i>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser6" value="cancer">
-                <div class="card-image">
-                  <img src="assets/images/userPics/user6.png" class="user-image">
-                </div>
-                <span class="card-title"> Lizzy</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Cancer <img class="sign" src="assets/images/signs/cancer.png"></h5>
-                  <p>Hi..I'm Lizzy..I'm here only because Donald is here..</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user6-distance" value="20422"></div>
-                  <i class="material-icons">location_on</i>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser7" value="pisces">
-                <div class="card-image">
-                  <img src="assets/images/userPics/Elton.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Elton</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Pisces <img class="sign" src="assets/images/signs/pisces.png"></h5>
-                  <p>Well not as fabulous as Donald though..</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user7-distance" value="20456"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser8" value="leo">
-                <div class="card-image">
-                  <img src="assets/images/userPics/justin-bieber-baby.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Justin</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Leo <img class="sign" src="assets/images/signs/leo.png"></h5>
-                  <p>I'm pretty straight forward guy..baby</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user8-distance" value="20261"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser9" value="virgo">
-                <div class="card-image">
-                  <img src="assets/images/userPics/JLO.jpg" class="user-image responsive">
-                </div>
-                <span class="card-title"> Jenny from the block</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Virgo <img class="sign" src="assets/images/signs/virgo.png"></h5>
-                  <p>Don't be fooled by the rocks that I got..I'm still a simple girl..just like Donald</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user9-distance" value="20057"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser10" value="aquarius">
-                <div class="card-image">
-                  <img src="assets/images/userPics/images (12).jpg" class="user-image">
-                </div>
-                <span class="card-title"> Handsome</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Aquarius <img class="sign" src="assets/images/signs/aquarius.png">
-                  </h5>
-                  <p>I'm very handsome..not like Donald handsome..but still prettey good lookin..</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user10-distance" value="20002"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser11" value="libra">
-                <div class="card-image">
-                  <img src="assets/images/userPics/user15.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Jack Dowson </span>
-                <div class="card-content">
-                  <h5>Astrological sign: Libra <img class="sign" src="assets/images/signs/libra.png"></h5>
-                  <p>I will drown for you...</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user11-distance" value="20074"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser12" value="cancer">
-                <div class="card-image">
-                  <img src="assets/images/userPics/harry.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Harry </span>
-                <div class="card-content">
-                  <h5>Astrological sign: Cancer <img class="sign" src="assets/images/signs/cancer.png"></h5>
-                  <p>I'm looking for magic love...</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user12-distance" value="20221"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser13" value="scorpio">
-                <div class="card-image">
-                  <img src="assets/images/userPics/but-did-you-die-feat-1-620x350.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Leslie Chow </span>
-                <div class="card-content">
-                  <h5>Astrological sign: Scorpio <img class="sign" src="assets/images/signs/scorpio.png"></h5>
-                  <p>Oh so you had a hard time working on your group project..but DID YOU DIE?</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user13-distance" value="20307"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser14" value="capricorn">
-                <div class="card-image">
-                  <img src="assets/images/userPics/snow.jpeg" class="user-image">
-                </div>
-                <span class="card-title"> John Snow</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Capricorn <img class="sign" src="assets/images/signs/capricorn.png">
-                  </h5>
-                  <p>I'm here to get Danny back..even though Gandalf is her perfect match..I will not lose
-                    this
-                    fight..also winter is coming..
-                  </p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user14-distance" value="20388"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser15" value="taurus">
-                <div class="card-image">
-                  <img src="assets/images/userPics/sherlock.jpg" class="user-image">
-                </div>
-                <span class="card-title">Sherlock Holmes</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Taurus <img class="sign" src="assets/images/signs/taurus.png"></h5>
-                  <p>You don't have to tell me your Zipcode..I'll figure out where you live anyways...
-                  </p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user15-distance" value="20439"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser16" value="aquarius">
-                <div class="card-image">
-                  <img src="assets/images/userPics/herminy.jpg" class="user-image">
-                </div>
-                <span class="card-title">Hermione</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Aquarius <img class="sign" src="assets/images/signs/aquarius.png">
-                  </h5>
-                  <p>I'm just here to stalk Harry..or Gary..
-                  </p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user16-distance" value="20268"></div>
-                  <i class="material-icons">location_on</i>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser17" value="sagittarius">
-                <div class="card-image">
-                  <img src="assets/images/userPics/fridge.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Fridge </span>
-                <div class="card-content">
-                  <h5>Astrological sign: Saggitarius <img class="sign" src="assets/images/signs/sagittarius.png"></h5>
-                  <p>Strength is my weakness..</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user17-distance" value="20097"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser18" value="aries">
-                <div class="card-image">
-                  <img src="assets/images/userPics/cardi-b-1.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Cardi yo</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Aries <img class="sign" src="assets/images/signs/aries.png"></h5>
-                  <p>I like dollars, I like diamonds
-                    I like stunting, I like shining
-                    I like million dollar deals
-                    Where's my pen?
-                  </p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user18-distance" value="20404"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser19" value="gemini">
-                <div class="card-image">
-                  <img src="assets/images/userPics/anya.png" class="user-image">
-                </div>
-                <span class="card-title"> Anya Smeagol</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Gemini <img class="sign" src="assets/images/signs/gemini.png"></h5>
-                  <p>Is either plotting or thinking about food</p>
-                  <p>Literally two different people</p>
-                  <p>Their own worst enemy</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user19-distance" value="20237"></div>
-                  <i class="material-icons">location_on</i>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 md12">
-              <div class="card user-card hide" id="fakeuser20" value="aries">
-                <div class="card-image">
-                  <img src="assets/images/userPics/danRobot.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Dan </span>
-                <div class="card-content">
-                  <h5>Astrological sign: Aries <img class="sign" src="assets/images/signs/aries.png"></h5>
-                  <p>Growing a beard was a right decision</p>
-                  <p>I grade your homework</p>
-                  <p>Oh I can change your grade</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user20-distance" value="20444"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser21" value="pisces">
-                <div class="card-image">
-                  <img src="assets/images/userPics/Dwayne the guy.jpg" class="user-image">
-                </div>
-                <span class="card-title">Spencer</span>
-                <div class="card-content">
-                  <h5>Astrological sign: Pisces <img class="sign" src="assets/images/signs/pisces.png"></h5>
-                  <p>I love Katie</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user21-distance" value="20241"> </div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser22" value="virgo">
-                <div class="card-image">
-                  <img src="assets/images/userPics/bethany.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Bethany </span>
-                <div class="card-content">
-                  <h5>Astrological sign: Virgo <img class="sign" src="assets/images/signs/virgo.png"></h5>
-                  <p>Hii..I'm Bethany..I'm an overweight middle age man..where's my phoneee?</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user22-distance" value="20580"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser23" value="leo">
-                <div class="card-image">
-                  <img src="assets/images/userPics/Obama.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Mr President </span>
-                <div class="card-content">
-                  <h5>Astrological sign: Leo <img class="sign" src="assets/images/signs/leo.png"></h5>
-                  <p>Your house?....Nice try Donald, nice try..</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user23-distance" value="56999"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card user-card hide" id="fakeuser24" value="libra">
-                <div class="card-image">
-                  <img src="assets/images/userPics/Hillary.jpg" class="user-image">
-                </div>
-                <span class="card-title"> Hillary </span>
-                <div class="card-content">
-                  <h5>Astrological sign: Libra <img class="sign" src="assets/images/signs/libra.png"></h5>
-                  <p>Your lease on that house is almost over Donald...byeeeeee</p>
-                  <br>
-                  <!--use this id to specify mileage-->
-                  <div id="user24-distance" value="20555"></div>
-                  <span class="material-icons">location_on</span>
-                </div>
-                <div class="card-action">
-                  <a href="chatroom.html">Start chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Return to horoscope -->
-          <div class="card-action" id="hideLovers">
-            <a href="#"><i class="material-icons">brightness_4</i>Back to horoscope?</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="page-footer pink">
-    <div class="container">
-      <div class="row center align">
-        <div class="col l12 s12">
-          <h5 class="white-text">You are what happened when I wished upon a star.</h5>
-          <p class="grey-text text-lighten-4">A passion project by young romantics</p>
-        </div>
-      </div>
-      <div class="row center align">
-        <img src="assets/images/signs/aries.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/taurus.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/gemini.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/cancer.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/leo.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/virgo.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/libra.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/scorpio.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/sagittarius.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/capricorn.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/aquarius.png" class="bot" height="50px" width="50px">
-        <img src="assets/images/signs/pisces.png" class="bot" height="50px" width="50px">
-      </div>
-    </div>
-    <div class="footer-copyright pink darken-2">
+      <!-- Card 2 hidden on document.ready -->
+      <!-- id tag weHere for showing remove class="hide" to show-->
       <div class="container">
-        StarXed ©2020
-        <a class="grey-text text-lighten-4 right" href="https://github.com/brer4449/groupproject1">Visit us on
-          GitHub!</a>
+        <div class="col s12 m12 z-depth-2 hide" id="weHere">
+          <div class="card">
+            <!--user profile gets displayed here-->
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser0" value="gemini">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/user2.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Donald </span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Gemini
+                      <img class="sign" src="assets/images/signs/gemini.png" />
+                    </h5>
+                    <p>
+                      Simple guy from New York. I've recently moved to DC and
+                      desperatly trying to find love. I live downtown, my house
+                      is pretty big. It's also white and it has walls. I like
+                      walls. If you like walls too maybe we could chat. Alrighty
+                      than..
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user0-distance" value="20017"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser1" value="scorpio">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/heygirl5.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Ryan</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Scorpio
+                      <img class="sign" src="assets/images/signs/scorpio.png" />
+                    </h5>
+                    <p>
+                      Girls keep stalking me..and I just want to find someone
+                      that I could be myself with..just be a simple guy..u
+                      know..like Donald..so I really like this app..wait a
+                      second..my Zipcode?.. and I'm out..
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user1-distance" value="20068"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m12">
+                <div
+                  class="card user-card hide"
+                  id="fakeuser2"
+                  value="capricorn"
+                >
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/user1..png"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Jimmy</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Capricorn
+                      <img
+                        class="sign"
+                        src="assets/images/signs/capricorn.png"
+                      />
+                    </h5>
+                    <p>
+                      Hi...I'm Jimmy..I love horoscope..I live with my mom..our
+                      house is not so big..well not like Donald's big..it still
+                      got walls and stuff..anyway..chat?
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user2-distance" value="20208"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser3" value="taurus">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/user4.png"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Kanye</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Taurus
+                      <img class="sign" src="assets/images/signs/taurus.png" />
+                    </h5>
+                    <p>Sup..u want a piece of Kanye?..</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user3-distance" value="20241"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser4" value="aries">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/user5.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Daenerys</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Aries
+                      <img class="sign" src="assets/images/signs/aries.png" />
+                    </h5>
+                    <p>
+                      Hi..I'm Danny..I gave birth to 3 dragons..pm me for more
+                      details..
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user4-distance" value="20380"></div>
+                    <i class="material-icons">location_on</i>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m12">
+                <div
+                  class="card user-card hide"
+                  id="fakeuser5"
+                  value="sagittarius"
+                >
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/gandalfTheGar.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Gandalf the Gary</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Sagittarius
+                      <img
+                        class="sign"
+                        src="assets/images/signs/sagittarius.png"
+                      />
+                    </h5>
+                    <p>Has all the information but tells none of it..</p>
+                    <p>Grumpy</p>
+                    <p>Secret party animal</p>
+                    <p>Life credo: "When you have a beard you have enough"</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user5-distance" value="20412"></div>
+                    <i class="material-icons">location_on</i>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser6" value="cancer">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/user6.png"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Lizzy</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Cancer
+                      <img class="sign" src="assets/images/signs/cancer.png" />
+                    </h5>
+                    <p>Hi..I'm Lizzy..I'm here only because Donald is here..</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user6-distance" value="20422"></div>
+                    <i class="material-icons">location_on</i>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser7" value="pisces">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/Elton.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Elton</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Pisces
+                      <img class="sign" src="assets/images/signs/pisces.png" />
+                    </h5>
+                    <p>Well not as fabulous as Donald though..</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user7-distance" value="20456"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser8" value="leo">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/justin-bieber-baby.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Justin</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Leo
+                      <img class="sign" src="assets/images/signs/leo.png" />
+                    </h5>
+                    <p>I'm pretty straight forward guy..baby</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user8-distance" value="20261"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser9" value="virgo">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/JLO.jpg"
+                      class="user-image responsive"
+                    />
+                  </div>
+                  <span class="card-title"> Jenny from the block</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Virgo
+                      <img class="sign" src="assets/images/signs/virgo.png" />
+                    </h5>
+                    <p>
+                      Don't be fooled by the rocks that I got..I'm still a
+                      simple girl..just like Donald
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user9-distance" value="20057"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div
+                  class="card user-card hide"
+                  id="fakeuser10"
+                  value="aquarius"
+                >
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/images (12).jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Handsome</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Aquarius
+                      <img
+                        class="sign"
+                        src="assets/images/signs/aquarius.png"
+                      />
+                    </h5>
+                    <p>
+                      I'm very handsome..not like Donald handsome..but still
+                      prettey good lookin..
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user10-distance" value="20002"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser11" value="libra">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/user15.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Jack Dowson </span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Libra
+                      <img class="sign" src="assets/images/signs/libra.png" />
+                    </h5>
+                    <p>I will drown for you...</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user11-distance" value="20074"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser12" value="cancer">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/harry.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Harry </span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Cancer
+                      <img class="sign" src="assets/images/signs/cancer.png" />
+                    </h5>
+                    <p>I'm looking for magic love...</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user12-distance" value="20221"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div
+                  class="card user-card hide"
+                  id="fakeuser13"
+                  value="scorpio"
+                >
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/but-did-you-die-feat-1-620x350.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Leslie Chow </span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Scorpio
+                      <img class="sign" src="assets/images/signs/scorpio.png" />
+                    </h5>
+                    <p>
+                      Oh so you had a hard time working on your group
+                      project..but DID YOU DIE?
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user13-distance" value="20307"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div
+                  class="card user-card hide"
+                  id="fakeuser14"
+                  value="capricorn"
+                >
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/snow.jpeg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> John Snow</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Capricorn
+                      <img
+                        class="sign"
+                        src="assets/images/signs/capricorn.png"
+                      />
+                    </h5>
+                    <p>
+                      I'm here to get Danny back..even though Gandalf is her
+                      perfect match..I will not lose this fight..also winter is
+                      coming..
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user14-distance" value="20388"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser15" value="taurus">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/sherlock.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title">Sherlock Holmes</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Taurus
+                      <img class="sign" src="assets/images/signs/taurus.png" />
+                    </h5>
+                    <p>
+                      You don't have to tell me your Zipcode..I'll figure out
+                      where you live anyways...
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user15-distance" value="20439"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div
+                  class="card user-card hide"
+                  id="fakeuser16"
+                  value="aquarius"
+                >
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/herminy.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title">Hermione</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Aquarius
+                      <img
+                        class="sign"
+                        src="assets/images/signs/aquarius.png"
+                      />
+                    </h5>
+                    <p>I'm just here to stalk Harry..or Gary..</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user16-distance" value="20268"></div>
+                    <i class="material-icons">location_on</i>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div
+                  class="card user-card hide"
+                  id="fakeuser17"
+                  value="sagittarius"
+                >
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/fridge.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Fridge </span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Saggitarius
+                      <img
+                        class="sign"
+                        src="assets/images/signs/sagittarius.png"
+                      />
+                    </h5>
+                    <p>Strength is my weakness..</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user17-distance" value="20097"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser18" value="aries">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/cardi-b-1.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Cardi yo</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Aries
+                      <img class="sign" src="assets/images/signs/aries.png" />
+                    </h5>
+                    <p>
+                      I like dollars, I like diamonds I like stunting, I like
+                      shining I like million dollar deals Where's my pen?
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user18-distance" value="20404"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser19" value="gemini">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/anya.png"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Anya Smeagol</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Gemini
+                      <img class="sign" src="assets/images/signs/gemini.png" />
+                    </h5>
+                    <p>Is either plotting or thinking about food</p>
+                    <p>Literally two different people</p>
+                    <p>Their own worst enemy</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user19-distance" value="20237"></div>
+                    <i class="material-icons">location_on</i>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 md12">
+                <div class="card user-card hide" id="fakeuser20" value="aries">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/danRobot.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Dan </span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Aries
+                      <img class="sign" src="assets/images/signs/aries.png" />
+                    </h5>
+                    <p>Growing a beard was a right decision</p>
+                    <p>I grade your homework</p>
+                    <p>Oh I can change your grade</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user20-distance" value="20444"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser21" value="pisces">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/Dwayne the guy.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title">Spencer</span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Pisces
+                      <img class="sign" src="assets/images/signs/pisces.png" />
+                    </h5>
+                    <p>I love Katie</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user21-distance" value="20241"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser22" value="virgo">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/bethany.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Bethany </span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Virgo
+                      <img class="sign" src="assets/images/signs/virgo.png" />
+                    </h5>
+                    <p>
+                      Hii..I'm Bethany..I'm an overweight middle age
+                      man..where's my phoneee?
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user22-distance" value="20580"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser23" value="leo">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/Obama.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Mr President </span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Leo
+                      <img class="sign" src="assets/images/signs/leo.png" />
+                    </h5>
+                    <p>Your house?....Nice try Donald, nice try..</p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user23-distance" value="56999"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card user-card hide" id="fakeuser24" value="libra">
+                  <div class="card-image">
+                    <img
+                      src="assets/images/userPics/Hillary.jpg"
+                      class="user-image"
+                    />
+                  </div>
+                  <span class="card-title"> Hillary </span>
+                  <div class="card-content">
+                    <h5>
+                      Astrological sign: Libra
+                      <img class="sign" src="assets/images/signs/libra.png" />
+                    </h5>
+                    <p>
+                      Your lease on that house is almost over Donald...byeeeeee
+                    </p>
+                    <br />
+                    <!--use this id to specify mileage-->
+                    <div id="user24-distance" value="20555"></div>
+                    <span class="material-icons">location_on</span>
+                  </div>
+                  <div class="card-action">
+                    <a href="chatroom.html">Start chat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Return to horoscope -->
+            <div class="card-action" id="hideLovers">
+              <a href="#"
+                ><i class="material-icons">brightness_4</i>Back to horoscope?</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
 
-  <!-- jQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Materialize Java -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- Our JS -->
-  <script src="assets/js/app.js"></script>
+    <!-- Footer -->
+    <footer class="page-footer pink">
+      <div class="container">
+        <div class="row center align">
+          <div class="col l12 s12">
+            <h5 class="white-text">
+              You are what happened when I wished upon a star.
+            </h5>
+            <p class="grey-text text-lighten-4">
+              A passion project by young romantics
+            </p>
+          </div>
+        </div>
+        <div class="row center align">
+          <img
+            src="assets/images/signs/aries.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/taurus.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/gemini.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/cancer.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/leo.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/virgo.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/libra.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/scorpio.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/sagittarius.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/capricorn.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/aquarius.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+          <img
+            src="assets/images/signs/pisces.png"
+            class="bot"
+            height="50px"
+            width="50px"
+          />
+        </div>
+      </div>
+      <div class="footer-copyright pink darken-2">
+        <div class="container">
+          StarXed ©2020
+          <a
+            class="grey-text text-lighten-4 right"
+            href="https://github.com/brer4449/groupproject1"
+            >Visit us on GitHub!</a
+          >
+        </div>
+      </div>
+    </footer>
 
-</body>
-
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <!-- Materialize Java -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Our JS -->
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>

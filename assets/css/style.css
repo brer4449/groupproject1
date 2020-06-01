@@ -1,7 +1,13 @@
 body {
   height: 100vh;
   width: 99vw;
-  background-image: linear-gradient(90deg, #cdc6ff 33.33%, #c2bcff 33.33%, #c2bcff 66.66%, #c3b5ff 66.66%);
+  background-image: linear-gradient(
+    90deg,
+    #cdc6ff 33.33%,
+    #c2bcff 33.33%,
+    #c2bcff 66.66%,
+    #c3b5ff 66.66%
+  );
   background-size: 100% 100%;
   margin: 0px;
   display: flex;
@@ -11,18 +17,16 @@ body {
 main {
   flex: 1 0 auto;
 }
-.headers{
-  background-color: #E91D63;
+.headers {
+  background-color: #e91d63;
   color: white;
 }
 .carousel .carousel-item {
-  width:500px !important;
+  width: 500px !important;
   margin-bottom: 5rem;
 }
 
-.sign{
-  width:20px;
-  height:20px;
+.sign {
+  width: 20px;
+  height: 20px;
 }
-
-
