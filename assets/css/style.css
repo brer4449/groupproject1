@@ -14,13 +14,24 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
+
+.larger-screen {
+  display: block;
+}
+
+.smaller-screen {
+  display: none;
+}
+
 main {
   flex: 1 0 auto;
 }
+
 .headers {
   background-color: #e91d63;
   color: white;
 }
+
 .carousel .carousel-item {
   width: 500px !important;
   margin-bottom: 5rem;
@@ -29,4 +40,14 @@ main {
 .sign {
   width: 20px;
   height: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .larger-screen {
+    display: none;
+  }
+
+  .smaller-screen {
+    display: block;
+  }
 }
