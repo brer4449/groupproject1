@@ -1,9 +1,7 @@
 ## Table of contents
 
 - [General info](#general-info)
-- [Overview Template](#overview-template)
-- [Dropdown Menus](#dropdown-menus)
-- [Daily Horoscope](#daily-horoscope)
+- [Functionality](#functionality)
 - [Technologies](#technologies)
 
 ## General Info
@@ -12,19 +10,11 @@ Our application is designed for the single everyday horoscope reader. It gets tw
 
 ## Overview Template:
 
-![alt text](https://github.com/brer4449/groupproject1/blob/master/assets/images/readme_pics/starXed.png)
-
-## Dropdown Menus:
-
-![alt text](https://github.com/brer4449/groupproject1/blob/master/assets/images/readme_pics/dropdown.png)
-
-## Daily Horoscope:
-
-![alt text](https://github.com/brer4449/groupproject1/blob/master/assets/images/readme_pics/daily.png)
+![demo of working app](./assets/images/starxed.gif)
 
 ## Technologies
 
-Materialize version 1
-jQuery version 3
-Mapquest API
-Aztro Horoscope API
+- Materialize version 1
+- jQuery version 3
+- Mapquest API
+- Aztro Horoscope API
