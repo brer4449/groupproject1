@@ -28,4 +28,3 @@ Materialize version 1
 jQuery version 3
 Mapquest API
 Aztro Horoscope API
-testing
